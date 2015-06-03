@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN' 'http://mybatis.org/dtd/mybatis-3-mapper.dtd' >
+<mapper namespace="com.friday.hgj.dao.CollectCargoDao">
+	
+	<sql id="mainSql">
+		id,collectUserId,cargoId,collectTime,status,operateTime,operateId
+	</sql>
+
+	<insert id="insert" parameterType="com.friday.hgj.model.CollectCargo" useGeneratedKeys="true" keyProperty="collectCargo.id">
+		insert into collect_cargo(collectUserId,cargoId,collectTime,status,operateTime,operateId) 
+		values(#{collectCargo.collectUserId},#{collectCargo.cargoId},now(),#{collectCargo.status},now(),#{collectCargo.operateId})
+	</insert>
+
+	<update id="updateStatus" parameterType="CollectCargo">
+		update collect_cargo
+		<set>
+			status = #{status},
+			operateTime = now()
+		</set>
+		where cargoId = #{cargoId} and collectUserId = #{collectUserId}
+	</update>
+
+	<select id="getCollectCargoById" parameterType="java.lang.Integer" resultType="com.friday.hgj.model.CollectCargo">
+		select <include refid="mainSql"/> from collect_cargo where status!=-1 and id = #{id}
+	</select>
+	
+	<select id="getCollectCargoIdByUserIdAndCargoId" parameterType="com.friday.hgj.model.CollectCargo" resultType="java.lang.Long">
+		select id from collect_cargo where status!=-1 and collectUserId = #{collectCargo.collectUserId} and cargoId = #{collectCargo.cargoId}
+	</select>
+	
+	<select id="getStatusCargoById" parameterType="java.lang.Long" resultType="java.lang.Integer">
+		select status from collect_cargo where status!=-1 and id = #{id}
+	</select>
+	
+	<select id="selectCargoIndexByCollectUserId" parameterType="long" resultType="long">
+       	select cargoId from collect_cargo where status!=-1 and collectUserId = #{collectUserId}
+    </select>
+
+</mapper>

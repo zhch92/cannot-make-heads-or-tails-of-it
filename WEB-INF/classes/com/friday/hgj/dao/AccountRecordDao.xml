@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN' 'http://mybatis.org/dtd/mybatis-3-mapper.dtd' >
+<mapper namespace="com.friday.hgj.dao.AccountRecordDao">
+	
+	<insert id="insert" parameterType="com.friday.hgj.model.AccountRecord" useGeneratedKeys="true" keyProperty="id">
+		insert into account_record (accountId, creditId, debitId, orderId, payRecordId, operateType, money, remark, status, operateTime, operateId, operateName, operateIp)
+	    values (#{accountId}, #{creditId}, #{debitId}, #{orderId}, #{payRecordId}, #{operateType}, #{money}, 
+	      #{remark}, #{status}, #{operateTime}, #{operateId}, #{operateName}, #{operateIp})
+	</insert>
+	
+	<update id="update" parameterType="com.friday.hgj.model.AccountRecord" >
+	    update account_record
+	    <set>
+	      <if test="accountId != null" >
+	        accountId = #{accountId},
+	      </if>
+	      <if test="creditId != null" >
+	        creditId = #{creditId},
+	      </if>
+	      <if test="debitId != null" >
+	        debitId = #{debitId},
+	      </if>
+	      <if test="orderId != null" >
+	        orderId = #{orderId},
+	      </if>
+	      <if test="payRecordId != null" >
+	        payRecordId = #{payRecordId},
+	      </if>
+	      <if test="operateType != null" >
+	        operateType = #{operateType},
+	      </if>
+	      <if test="money != null" >
+	        money = #{money},
+	      </if>
+	      <if test="remark != null" >
+	        remark = #{remark},
+	      </if>
+	      <if test="status != null" >
+	        `status` = #{status},
+	      </if>
+	      <if test="operateTime != null" >
+	        operateTime = #{operateTime},
+	      </if>
+	      <if test="operateId != null" >
+	        operateId = #{operateId},
+	      </if>
+	      <if test="operateName != null" >
+	        operateName = #{operateName},
+	      </if>
+	      <if test="operateIp != null" >
+	        operateIp = #{operateIp},
+	      </if>
+	    </set>
+	    where id = #{id}
+	</update>
+	
+	<select id="selectAccountRecords" parameterType="com.friday.hgj.model.AccountRecord" resultType="com.friday.hgj.model.AccountRecord" >
+		select * from account_record
+		<where>
+		   status!=-1
+	      <if test="accountId!=0" >
+	      and accountId = #{accountId}
+	      </if>
+	      <if test="creditId != 0" >
+	      and creditId = #{creditId}
+	      </if>
+	      <if test="debitId != 0" >
+	      and debitId = #{debitId}
+	      </if>
+	      <if test="orderId != 0" >
+	      and orderId = #{orderId}
+	      </if>
+	      <if test="payRecordId != 0" >
+	      and payRecordId = #{payRecordId}
+	      </if>
+	      <if test="operateType != 0" >
+	       and operateType = #{operateType}
+	      </if>
+	      <if test="money != 0" >
+	       and money = #{money}
+	      </if>
+	      <if test="remark != null" >
+	       and remark = #{remark}
+	      </if>
+	      <if test="status != 0" >
+	       and status = #{status}
+	      </if>
+	      <if test="operateTime != null" >
+	       and operateTime = #{operateTime}
+	      </if>
+	      <if test="operateId != 0" >
+	       and operateId = #{operateId}
+	      </if>
+	      <if test="operateName != null" >
+	       and operateName = #{operateName}
+	      </if>
+	      <if test="operateIp != null" >
+	       and operateIp = #{operateIp}
+	      </if>
+	      <if test="sqlstr != null" >
+	       	${sqlstr}
+	      </if>
+		</where>
+	</select>
+	<select id="countAccountRecordsPage"  resultType="int" >
+		select count(id) from account_record
+		<where>
+		    status!=-1  and ( (operateType=1 and status=2) or (operateType=2 and status=16) or (operateType!=1  and operateType!=2) )
+			<if test="ordersQuery.startTime!=null ">
+				<if test="ordersQuery.endTime==null ">
+					<![CDATA[
+						and operateTime >= #{ordersQuery.startTime}
+				    ]]>
+				</if>
+				<if test="ordersQuery.endTime!=null ">
+					<![CDATA[
+						and operateTime >= #{ordersQuery.startTime} and date_format(operateTime,'%Y-%m-%d') <= #{ordersQuery.endTime}
+				    ]]>
+				</if>
+			</if>
+			<if test="ordersQuery.userId != 0 and ordersQuery.userId != '' " >
+				and ( creditId = #{ordersQuery.userId} or debitId = #{ordersQuery.userId} ) 
+			</if>
+		</where>
+	</select>
+	<select id="selectAccountRecordsPage" parameterType="com.friday.hgj.model.AccountRecord" resultType="com.friday.hgj.model.AccountRecord" >
+		select * from account_record
+		<where>
+			status!=-1  and ( (operateType=1 and status=2) or (operateType=2 and status=16) or (operateType!=1  and operateType!=2) )
+			<if test="ordersQuery.startTime!=null ">
+				<if test="ordersQuery.endTime==null ">
+					<![CDATA[
+						and operateTime >= #{ordersQuery.startTime}
+				    ]]>
+				</if>
+				<if test="ordersQuery.endTime!=null ">
+					<![CDATA[
+						and operateTime >= #{ordersQuery.startTime} and date_format(operateTime,'%Y-%m-%d') <= #{ordersQuery.endTime}
+				    ]]>
+				</if>
+			</if>
+			<if test="ordersQuery.userId != 0 and ordersQuery.userId != '' " >
+				and ( creditId = #{ordersQuery.userId} or debitId = #{ordersQuery.userId} ) 
+			</if>
+		</where>
+		order by id desc
+		limit #{start},#{size}
+	</select>
+	
+	<select id="selectAccountRecordsByPayOrder" parameterType="hashmap" resultType="com.friday.hgj.model.AccountPayOrderRecord" >
+		select 
+				t1.id id,t2.accountId accountId,t1.orderId orderId,t1.creditId creditId,t1.operateTime operateTime,
+				t1.remark remark,t1.money money,t2.total total,t3.isInvoice isInvoice  
+				from account_record t1,account t2,orders t3 
+				where 
+					t1.accountId = t2.accountId 
+				and 
+					t1.orderId = t3.id
+				and 
+					t3.`status`= 100
+				and
+					t1.operateType = 4
+				and 
+					(t3.isInvoice is null or t3.isInvoice &lt;  2) 
+				and 
+				    t1.creditId = #{creditId}
+				order by t1.id desc limit #{start},#{pageSize}
+	</select>
+	
+	<select id="selectCountRecordsByPayOrder" parameterType="hashmap" resultType="integer" >
+		select 
+				count(*) 
+				from account_record t1,account t2,orders t3
+				where 
+					t1.accountId = t2.accountId 
+				and 
+					t1.orderId = t3.id
+				and 
+					t3.`status`= 100
+				and
+					t1.operateType = 4
+				and 
+					(t3.isInvoice is null or t3.isInvoice &lt;  2) 
+				and 
+				    t1.creditId = #{creditId}
+	</select>
+	
+	<select id="selectOrderRecordsByCom" parameterType="hashmap" resultType="com.friday.hgj.model.AccountPayOrderRecord" >
+		select 
+			  t1.id id,t1.finalTotal money,t2.total total,t1.isInvoice isInvoice,t1.createTime operateTime,t1.orderNo
+		from 
+			  orders t1, account t2
+		where 
+			  t1.status= 100
+		  and t1.shipperUserId = t2.userId
+		  and t1.shipperUserId = #{shipperUserId} 
+		  <!-- 
+		  and (t1.isInvoice is null or t1.isInvoice != 2) 
+		   -->
+	    order by id desc limit #{start},#{pageSize}
+	</select>
+	
+	<select id="selectCountOrderRecordsByCom" parameterType="hashmap" resultType="integer" >
+		select 
+				count(*) 
+		from 
+			  orders t1, account t2
+		where 
+			  t1.status= 100
+		  and t1.shipperUserId = t2.userId
+		  and t1.shipperUserId = #{shipperUserId} 
+		   <!-- 
+		  and (t1.isInvoice is null or t1.isInvoice != 2) 
+		   -->
+	</select>
+	
+</mapper>

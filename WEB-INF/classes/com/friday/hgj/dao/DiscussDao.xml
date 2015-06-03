@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN' 'http://mybatis.org/dtd/mybatis-3-mapper.dtd' >
+<mapper namespace="com.friday.hgj.dao.DiscussDao">
+    <insert id="insertCargoPriceFeel" parameterType="Discuss"  >
+		insert into discuss(cargoId,remarkUserId,discussType,remarkTime,operateTime,operateId) 
+		values(#{cargoId},#{remarkUserId},#{discussType},#{remarkTime},#{operateTime},#{operateId})
+	</insert>
+	
+	<select id="selectDiscussCargoIdIndexBycargoId" parameterType="long" resultType="Discuss">
+       	select * from discuss where remarkUserId = #{remarkUserId}
+    </select>
+</mapper>

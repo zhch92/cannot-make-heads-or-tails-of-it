@@ -1,0 +1,96 @@
+/*----------------------------------------------------2014.9.17 add by jan--------------------------------------------------------*/
+
+/*----------------------------------------------------base--------------------------------------------------------*/
+    .red{ color:#da2626;}
+    .blue{ color:#0093d3;}
+    .gray{ color:#626262;}
+	.blue2{color:#359adb;}
+	.time{color:#359adb;}
+	.orange{color:#fd8701;}
+	.green{ color:#097c25;}
+	.greenli{ color:#00b42b;}
+	.ligreen{color:#50df83;}
+	.darkblue{color: #42579f;}
+	.btngray{ background:#f7f7f7;color:#585858; border:1px solid #ccc;}
+	.btnblue{background:#348cd3;border:1px solid #348cd3;color: #fff; }
+	.btngray2{ background:#f7f7f7;color:#585858; border:1px solid #ccc;}
+	.btnblue2{background:#348cd3;border:1px solid #348cd3;color: #fff;}
+	.btnorange{background:#ff8600;color: #fff;}
+	.btngold{background:#fffbeb;border:1px solid #ccc;color: #585858;}
+	a.btnblue:hover{background:#4296d9;color:#fff;}
+	a.btngray:hover{ background:#fff; color:#585858 !important;}
+/*-------------------------------------------------------货源管理----------------------------------------------------*/
+	.supply .type1{ background:#fff;}
+	.supply .type2{ background:#fffde8; border:}
+	.supply .type2 .pub_djs{ background:none; border-width:1px 0;}
+	.supply .type3{ background:#fefef4;}
+    .supply  .type1 ul  li.f26 {color:#585858;}
+	form .form_list{ border-top:1px dashed #d1cfbd;background:#f7f7f7;}
+	.w4 form .form_list{ border:none;background:#fff;}
+	form .form_list li .form_label{color:#626262; }
+	form .form_list .form_text select{border:1px solid #ccc; color:#373737;} 
+	/*-------------------------------------------------------白色颜色----------------------------------------------------*/
+	.order_content .supply{ background:#fff;}
+	.account_user1  .form_list{ background:#fff;}
+    .w4 .form_list .f18{ line-height:30px; color:#575757;}
+	.w4{ left:50%; margin-left:-200px; z-index:1001; position:fixed; background:#fff;}
+	.w4 .title{border-bottom:1px solid #ccc;}
+	.w4 .title a {position: absolute; right: 18px;top: 14px;}
+	.ts{background:#ffebd4;border: 1px solid #ff8400;color: #ff6600;}
+    .supply li.type4 h4 span{color:#858585;}	
+	form .form_list .form_text .f_text{ border:1px solid #ccc; color:#373737;} 
+	.form_list select{ color:#585858;}
+	form .form_list .form_text{color:#373737;} 
+    .supply li.type4{ padding:30px 0 50px; background:#f7f7f7;}
+	
+	.even{background:#f9f9f9;}
+	.odd{background:#fff;}
+    .selected{background:#e1e5ef;}
+    .tab_blue{background: url("../images/news_listbg1.jpg") repeat-y;}
+    .tab_gold{background: url("../images/news_listbg2.jpg") repeat-y;}
+	.supply li.type3 table{color:#7e7e7e; background:#fff;}
+	.more_box{ background:#fff; border-top:1px dashed #ccc;}
+    .more_top_label{color:585858;}	
+    .orderStyle1 .tips3 font,
+	.orderStyle2 .tips3 font{border:1px solid #ff8400;background:#ffebd4;color:#ff6600 !important;}	
+	.type4 .orange{color:#fd8701 !important;}
+    .btn_yzm{border:1px solid #cecece;background:#fafafa;color:#378cd3;}	
+	.inpgray{width:150px;height:28px;line-height:28px;border:1px solid #ccc;padding:0 5px;}
+	/*1.0.7*/
+	.ntable thead{ background:#fff1d4;}
+	.ntable .orbj{ background:#f9f9f9;}
+	.lhaddress .sdStzm .sdcs font,
+	.lhaddress .lhjt .sdcs font,
+	.lhaddress .lhjt .sdxxs{color:#585858;}
+	.lhaddress .sdStzm .sdtime{color:#0093d5;}
+    .supply i.icon_orjt +span{color:#ffc37d;}
+    .supply i.icon_hyjt +span{color:#359adb;}
+	.more_news span.f24,
+	.more_news span.f34{ color:#da2626;}
+    .poptip{color: #a1a1a1;background-color:#fff;border: solid 1px #ccc;}
+    .poptip ul li.f18{color:#626262; border-top:1px solid #ccc; background:#f2f2f2;}
+	.supply li.type3 .ntable th{color:#020202;}
+    .supply .type1 .list1{ color:#da2626;}
+	
+    /*倒计时*/
+    .pub_djs{background:#fffad1; color:#a48942; border:1px solid #f4e87e;}
+	.yd_djs{background:#fffad2; color:#585858; border:1px solid #e8f077;}
+	.pub_djs font strong,.yd_djs font strong{ color:#da2626;}
+	
+    /*cue,tip*/
+	.cue,.xgtip{border:1px solid #ff8400;background:#ffebd4;color:#ff6600;}	
+	/*1.0.7*/
+	.tar{border:1px solid #ccc;}
+	
+	.zhru{ background:#fffbeb; border:1px solid #ccc;}
+	.yzm{background: none repeat scroll 0 0 #fafafa;border: 1px solid #cecece; color: #378cd3;}
+	/*.ptext{ border:1px solid #ccc; color:#373737;} */
+	
+	
+	
+	
+	
+	
+	
+	
+	

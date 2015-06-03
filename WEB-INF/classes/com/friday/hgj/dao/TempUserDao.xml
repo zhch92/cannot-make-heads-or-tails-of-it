@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+        'http://mybatis.org/dtd/mybatis-3-mapper.dtd' >
+<mapper namespace="com.friday.hgj.dao.TempUserDao">
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="tempUser.id"
+            parameterType="com.friday.hgj.model.TempUser">
+      insert into tempuser (username, phone, carnumber, cartype, carlength,operatetime)
+              values(#{tempUser.username}, #{tempUser.phone},#{tempUser.carnumber},#{tempUser.cartype},#{tempUser.carlength}, #{tempUser.operatetime})
+    </insert>
+</mapper>

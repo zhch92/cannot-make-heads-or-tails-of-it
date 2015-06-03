@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>拉货宝</title>
+<link href="css/common.css" rel="stylesheet" media="screen" type="text/css">
+<link href="css/style.css" rel="stylesheet" media="screen" type="text/css">
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" type="text/css">
+<link href="css/jock-citypicker-2.0.min.css" rel="stylesheet" media="screen" type="text/css">
+<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+<div class="wh headerHeight">
+	<div class="wh header">
+		<div class="wh_mar re">
+			早上好！ 欢迎访问 Lahuo8.com 拉货宝 ！  服务热线 400-888-8888
+			<div class="ab head_sign"><a href="javascript:void(0)" class="divBoxButton">登录</a>|<a href="javascript:void(0)" class="divBoxButton">注册</a>|<a href="javascript:void(0)">企业登录</a></div>
+		</div>
+	</div>
+</div>
+<div class="wh currentBox404 current404Height">
+	<div class="wh_mar hd">
+		<div class="current404img">
+			<div class="ft">哥,你访问的页面被拉走了！</div>
+			<div class="href404"><a href="#">返回首页</a><a href="#">返回上一页</a></div>
+		</div>
+	</div>
+</div>
+
+</body>
+
+<script type="text/javascript">
+$(function(){
+	$(window).resize(function(){c404Height()}); 
+	setTimeout("c404Height()");
+	$(window).scroll(function(){c404Height()});
+});
+function c404Height(){
+	$(".current404Height").css({"height":$(window).height()-$(".headerHeight").height()});
+}
+</script>
+</html>

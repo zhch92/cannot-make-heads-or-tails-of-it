@@ -1,0 +1,331 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "微软雅黑";
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+li {
+    list-style: none;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: "";
+    height: 0;
+    display: block;
+    clear: both;
+}
+
+.header {
+    background: url(http://10.0.0.2/statics/images/head.jpg);
+    .head {
+        width: 1024px;
+        margin: 0 auto;
+        padding: 13px 0px;
+        .tel {
+            float: left;
+            color: #ededed;
+        }
+        ul {
+            float: right;
+            li {
+                color: #ededed;
+                float: left;
+                line-height: 20px;
+                a {
+                    color: #ededed;
+                    &:hover {
+                        color: #feaf51;
+                    }
+                }
+                .active {
+                    color: #feaf51;
+                }
+            }
+            .user {
+                padding-left: 33px;
+                background: url(http://10.0.0.2/statics/images/user.png) no-repeat left;
+            }
+            .login {
+                margin-left: 24px;
+                color: #feaf51;
+            }
+            .test {
+                margin-left: 62px;
+            }
+        }
+    }
+}
+
+.content {
+    background: #f5f5f5;
+    padding-top: 132px;
+    padding-bottom: 300px;
+    .logo {
+        margin: 0 auto;
+        text-align: center;
+        width: 1024px;
+    }
+    h1 {
+        text-align: center;
+        margin: 60px auto;
+        width: 1024px;
+    }
+    .table {
+        margin: 0 auto;
+        width: 230px;
+        input {
+            width: 193px;
+            padding-left: 35px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        .user {
+            position: relative;
+            margin-bottom: 20px;
+            input {
+                color: #373737;
+            }
+            i {
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                width: 14px;
+                height: 14px;
+                display: block;
+                background: url(http://10.0.0.2/statics/images/user_2.png) no-repeat;
+            }
+        }
+        .pwd {
+            position: relative;
+            margin-bottom: 15px;
+            input {
+                color: #373737;
+            }
+            i {
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                width: 14px;
+                height: 14px;
+                display: block;
+                background: url(http://10.0.0.2/statics/images/pws.png) no-repeat;
+            }
+        }
+        .forget {
+            text-align: right;
+            margin-bottom: 40px;
+            a {
+                color: #bdbdbd;
+                font-size: 14px;
+                &:hover {
+                    color: #feaf51;
+                }
+            }
+        }
+        .btn {
+            button {
+                height: 29px;
+                width: 224px;
+                outline: none;
+                background: url(http://10.0.0.2/statics/images/btn_4.png) no-repeat 0px 0px;
+                color: #fff;
+                border: none;
+                font-size: 14px;
+                &:link {
+                    background-position: 0px -0px;
+                }
+                &:visited {
+                    background-position: 0px -0px;
+                }
+                &:hover {
+                    background-position: 0px -29px;
+                }
+                &:active {
+                    background-position: 0px -58px;
+                }
+            }
+        }
+        .register {
+            text-align: right;
+            margin-top: 15px;
+            a {
+                color: #feaf51;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.footer {
+    padding: 28px 0px;
+    background: #f3f3f3;
+    // margin-top: 120px;
+    .foot {
+        width: 1024px;
+        margin: 0 auto;
+        p {
+            line-height: 15px;
+            text-align: center;
+            img {
+                border: none;
+            }
+        }
+    }
+}
+
+// 忘记密码
+.main_f {
+    .main {
+        width: 1024px;
+        margin: 0 auto;
+        .logo {
+            margin-top: 85px;
+            margin-bottom: 52px;
+        }
+        .step {
+            background: url(http://10.0.0.2/statics/images/info_body.png) no-repeat;
+            padding: 45px 65px 0;
+            width: 894px;
+            height: 951px;
+            h3 {
+                padding-bottom: 25px;
+                border-bottom: 1px dashed #dddddd;
+                margin-bottom: 55px;
+                font-size: 20px;
+                color: #332c2b;
+                font-weight: normal;
+            }
+            .step_show {
+                padding: 0 27px;
+                ul{
+                    background: url(http://10.0.0.2/statics/images/step_line.png) no-repeat 0px 86px;
+                }
+                li {
+                    float: left;
+                    margin-left: 134px;
+                    margin-right: 42px;
+                    width: 77px;
+                    line-height: 20px;
+                    .img {
+                        background: url(http://10.0.0.2/statics/images/step.png) no-repeat 0px -70px;
+                        width: 77px;
+                        font-size: 20px;
+                        height: 70px;
+                        line-height: 55px;
+                        text-align: center;
+                        color: #ccc;
+                    }
+                    .img_active{
+                        background-position: 0px 0px;
+                        color: #414141;
+                    }
+                    b{
+                        display: block;
+                        margin: 8px auto;
+                        width: 20px;
+                        height: 20px;
+                        background: url(http://10.0.0.2/statics/images/chose.png) no-repeat 0px -20px ;
+                    }
+                    .b_active{
+                        background-position: 0px 0px;
+                    }
+                    p{
+                        text-align: center;
+                    }
+                }
+            }
+            .table{
+                margin-top: 75px;
+                position: relative;
+
+                .next_1{
+                    position: absolute;
+                margin-left: 242px;
+                display: none;
+                    
+                }
+                .next_2{
+                    position: absolute;
+                margin-left: 185px;
+                display: none;
+                    
+                }
+                .next_active{
+                    display: block;
+                }
+                .next_3{
+                    position: absolute;
+                    margin-left: 240px;
+                    display: none;
+                    li{
+                        font-size: 32px;
+                        color: #332c2b;
+                        text-align: center;
+                    }
+                }
+
+                li{
+                    margin-bottom: 20px;
+                    .tel{
+                    margin-left: 20px;margin-right: 17px;
+                    width: 130px;
+                    border: 1px solid #d9d9d9;
+                    padding: 5px 10px;
+                }
+                .code{
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    width: 130px;
+                    border: 1px solid #d9d9d9;
+                    padding: 5px 10px;
+                }
+                .msg{
+                    border: none;
+                    background: url(http://10.0.0.2/statics/images/msg.png) no-repeat;
+                    width: 104px;
+                    height: 29px;
+                    outline: none;
+                    color: #ffc487;
+                }
+                .next{
+
+                        height: 29px;
+                        width: 118px;
+                        outline: none;
+                        background: url(http://10.0.0.2/statics/images/butn.png) no-repeat 0px 0px;
+                        color: #fff;
+                        border: none;
+                        font-size: 14px;
+                        &:link {
+                            background-position: 0px -0px;
+                        }
+                        &:visited {
+                            background-position: 0px -0px;
+                        }
+                        &:hover {
+                            background-position: 0px -29px;
+                        }
+                        &:active {
+                            background-position: 0px -58px;
+                        }
+                   
+                }
+                }
+                
+            }
+        }
+    }
+}

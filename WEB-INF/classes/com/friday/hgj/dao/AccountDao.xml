@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN' 'http://mybatis.org/dtd/mybatis-3-mapper.dtd' >
+<mapper namespace="com.friday.hgj.dao.AccountDao">
+	
+	
+	 <insert id="insert" parameterType="com.friday.hgj.model.Account"
+	 	useGeneratedKeys="true" keyProperty="accountId" >
+	    insert into account (userId, total, frozen, usable,operateTime, lastUpdateTime, operateId)
+	    values (#{userId}, #{total}, #{frozen}, #{usable}, #{operateTime}, #{lastUpdateTime}, #{operateId})
+	 </insert>
+	
+	 <update id="update" parameterType="com.friday.hgj.model.Account" >
+	    update account set
+	        total = #{total},frozen = #{frozen},
+	        usable = #{usable},lastUpdateTime = #{lastUpdateTime}
+	    where accountId = #{accountId}
+  	 </update>
+</mapper>

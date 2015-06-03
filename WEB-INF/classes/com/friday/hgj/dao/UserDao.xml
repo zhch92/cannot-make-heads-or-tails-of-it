@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+        'http://mybatis.org/dtd/mybatis-3-mapper.dtd' >
+<mapper namespace="com.friday.hgj.dao.UserDao">
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="user.id"
+            parameterType="com.friday.hgj.model.User">
+      insert into user (userName, password, status, usertype, operateTime)
+              values(#{user.userName}, #{user.password},#{user.status},#{user.usertype}, #{user.operateTime})
+    </insert>
+
+    <select id="checkUserNameExits" resultType="int">
+        select count(*) from user where userName=#{userName} and status=1
+    </select>
+
+    <select id="getUserById" resultType="com.friday.hgj.model.User">
+        select * from user a where id = #{uid}
+    </select>
+</mapper>

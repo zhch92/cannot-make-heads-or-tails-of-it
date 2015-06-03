@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+        'http://mybatis.org/dtd/mybatis-3-mapper.dtd' >
+<mapper namespace="com.friday.hgj.dao.SensitiveInfoDao" >
+  
+  <insert id="insert" parameterType="com.friday.hgj.model.SensitiveInfo">
+    insert into sensitive_info (operateType, operateId, operateTime, 
+      remark, operateIp)
+    values (#{operateType,jdbcType=INTEGER}, #{operateId,jdbcType=BIGINT}, #{operateTime,jdbcType=TIMESTAMP}, 
+      #{remark,jdbcType=VARCHAR}, #{operateIp,jdbcType=VARCHAR})
+  </insert>
+ 
+</mapper>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN' 'http://mybatis.org/dtd/mybatis-3-mapper.dtd' >
+<mapper namespace="com.friday.hgj.dao.CompanyInfoDao">
+	<insert id="insertFirst" parameterType="CompanyInfo" useGeneratedKeys="true" keyProperty="id">
+		insert into company_info(userId,linkMobile,operateTime,fhds,zhl,jkl,jkts,zhts,companyName) 
+		values(#{userId},#{linkMobile},#{operateTime},#{fhds},#{zhl},#{jkl},#{jkts},#{zhts},#{companyName})
+	</insert>
+	<update id="updateCompanyInfo" parameterType="com.friday.hgj.model.CompanyInfo" >
+		update company_info 
+			<set>
+			<if test="companyInfo.companyName != null">
+				companyName = #{companyInfo.companyName},
+			</if>
+			<if test="companyInfo.companyAdd != null">
+				companyAdd = #{companyInfo.companyAdd},
+			</if>
+			<if test=" companyInfo.companyType != 0">
+				companyType = #{companyInfo.companyType},
+			</if>
+			<if test=" companyInfo.industryType != 0">
+				industryType = #{companyInfo.industryType},
+			</if>
+			<if test="companyInfo.linkName != null">
+				linkName=#{companyInfo.linkName},
+			</if>
+			<if test="companyInfo.linkPhone != null">
+				linkPhone=#{companyInfo.linkPhone},
+			</if>
+			<if test="companyInfo.linkMobile != null">
+				linkMobile=#{companyInfo.linkMobile},
+			</if>
+			<if test="companyInfo.operateTime != null">
+				operateTime = #{companyInfo.operateTime},
+			</if>
+		</set>
+		 where id=#{companyInfo.id} 
+	</update>
+	<update id="updateCompanyInfoSafe" parameterType="com.friday.hgj.model.CompanyInfo" >
+		update company_info 
+			<set>
+			<if test="email != null">
+				email = #{email},
+			</if>
+			<if test="payName != null">
+				payName = #{payName},
+			</if>
+			<if test="payMobile != null">
+				payMobile = #{payMobile},
+			</if>
+			<if test="alarmValue != 0">
+				alarmValue=#{alarmValue},
+			</if>
+			<if test="alarmPhone != null">
+				alarmPhone=#{alarmPhone},
+			</if>
+			<if test="operateTime != null">
+				operateTime = #{operateTime},
+			</if>
+		</set>
+		 where id=#{id} 
+	</update>
+	<update id="updateCompanyInfoZgrz" parameterType="com.friday.hgj.model.CompanyInfo" >
+		update company_info 
+			<set>
+			<if test="yyzzhm != null">
+				yyzzhm = #{yyzzhm},
+			</if>
+			<if test="yyzzzp != null">
+				yyzzzp = #{yyzzzp},
+			</if>
+			<if test="zzjgdm != null">
+				zzjgdm = #{zzjgdm},
+			</if>
+			<if test="zzjgdmzp != null">
+				zzjgdmzp=#{zzjgdmzp},
+			</if>
+			<if test="operateTime != null">
+				operateTime = #{operateTime},
+			</if>
+		</set>
+		 where id=#{id} 
+	</update>
+</mapper>

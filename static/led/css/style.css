@@ -1,0 +1,87 @@
+/* ==================================================
+
+	Theme Name : OfficeSpace
+	Version : 1.0   
+	Author : Mr. Rowe
+	Author URI : http://www.glinbbs.com/	
+
+ ================================================== */
+@charset 'utf-8';
+
+body{font-family:'宋体', 'Arial', 'Tahoma', 'Helvetica', 'sans-serif';font-size:12px;line-height:24px;color:#000;}
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,tr{margin:0;padding:0;}
+input,select{font-size:12px;vertical-align:middle;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img,button{border:0;}
+ol, ul ,li {list-style: none;}
+ins a,a{text-decoration:none;}
+a:hover,a:hover font,a:hover b,a:hover span,a:hover div{color:#1b7dc6}
+a{color:#000}
+i{font-style:normal;vertical-align:middle;}
+body{background:#fff;}
+
+/* ================ head ================ */
+
+@font-face {
+font-family:'UniDreamLED';
+src:url('UnidreamLED.ttf');
+src:local('UnidreamLED'),
+	url('UnidreamLED.ttf') format('truetype'),
+	url('UnidreamLED.woff') format('woff'),
+	url(UnidreamLED.svg#UnidreamLED) format('svg');
+} 
+
+
+.font_family{font-family:'UniDreamLED';}
+.head{padding:40px 0 0 50px;float:left;}
+.header_ewm{float:right;padding:40px 40px 0 0;}
+.cityBox{background:url(../images/city.png) no-repeat 165px center;width:440px;float:left;}
+	.cityBox .cityLeft{width:140px;float:left;}
+	.cityBox .cityRight{width:140px;float:right;}
+	
+.blue{color:#263f91;}
+.orange{color:#ea7400;}
+.red{color:#df0000;}
+
+.ft26{font-size:22px;}
+
+.ml5{display:inline-block;}
+.pr10{padding-left:10px;}
+
+.moneyNum span{font-size:50px;}
+.moneyNum span.ft26{font-size:26px;padding-left:10px;}
+.huoyuan_more{padding-left:50px;background:url(../images/icon.png) no-repeat 10px 0px;height:50px;}
+.huoyuan_more .numStyle{font-size:50px;}
+.huoyuan_more .dw{font-size:30px;padding-left:10px;}
+.huoyuan_more .fangSize{font-size:30px;padding-right:5px;}
+
+.font_xie{padding:0 5px;}
+.hidden{overflow:hidden;}
+.content{width:100%;text-align:left;}
+	th{font-size:30px;color:#fff;font-family:"微软雅黑";height:80px;font-weight:normal;}
+	th.frist1,th.frist3,th.frist5{background:#3451b1;}
+	th.frist2,th.frist4,th.frist6{background:#263f91;}
+	th.frist2,th.frist3,th.frist4,th.frist5,th.frist6{text-align:center;}
+	th.frist6{background:#263f91;color:#ffa800;}
+	td{font-size:26px;font-family:"微软雅黑";height:110px;font-weight:normal;border-bottom:1px solid #ccc;color:#1a1919;}
+	.content tbody tr.bg{background:#e4e4e4;}
+	.frist1{padding-left:50px;width:510px;}
+	.frist2{width:290px;}
+	td.frist2{width:240px;padding-left:50px;}
+	.moneyNum{}
+	.frist3{width:465px;}
+	.frist4{width:195px;}
+	td.frist4{width:145px;padding-left:50px;}
+	td.frist4 font{font-size:32px;padding-right:10px;}
+	.frist5{width:225px;}
+	td.frist5{width:175px;padding-left:50px;}
+	td.frist5 font{font-size:32px;padding:0 5px;}
+	.frist6{width:190px;text-align:center;}
+	.frist6 img{width:90px;height:90px;}
+	.frist1 span{width:100%;display:inline-block;line-height:36px;}
+#mq{width:100%;overflow:hidden;}
+
+
+
+
+

@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN' 'http://mybatis.org/dtd/mybatis-3-mapper.dtd' >
+<mapper namespace="com.friday.hgj.dao.CargoDao">
+
+    <insert id="insert" parameterType="com.friday.hgj.model.Cargo" useGeneratedKeys="true" keyProperty="cargo.id">
+		insert into cargo(userId,cargoNo,cargoName,weight,square,tvratio,province,city,county,startAdd,linkName,linkPhone,sendTime,arrivalTime,arrivalProvince,
+		arrivalCity,arrivalCounty,arrivalAdd,carLength,carType,quote,quoteCompany,insuranceStatus,coverage,insurRate,shelve,
+		createTime,operateTime,operateId,chargeMode) 
+		values(#{cargo.userId},#{cargo.cargoNo},#{cargo.cargoName},#{cargo.weight},#{cargo.square},#{cargo.tvratio},#{cargo.province},#{cargo.city},#{cargo.county},#{cargo.startAdd},#{cargo.linkName},#{cargo.linkPhone},#{cargo.sendTime},#{cargo.arrivalTime},
+		#{cargo.arrivalProvince},#{cargo.arrivalCity},#{cargo.arrivalCounty},#{cargo.arrivalAdd},#{cargo.carLength},#{cargo.carType},#{cargo.quote},#{cargo.quoteCompany},#{cargo.insuranceStatus},#{cargo.coverage},
+		#{cargo.insurRate},#{cargo.shelve},#{cargo.createTime},#{cargo.operateTime},#{cargo.operateId},#{cargo.chargeMode})
+	</insert>
+
+    <update id="update" parameterType="Cargo">
+        update cargo
+        <set>
+            <if test="operateTime != null">
+                operateTime = now(),
+            </if>
+            weight = #{weight},
+            square = #{square},
+            tvratio = #{tvratio},
+            quote = #{quote},
+            remark = #{remark},
+            sendTime=#{sendTime},
+            arrivalTime=#{arrivalTime},
+            carLength=#{carLength},
+            carType=#{carType},
+            <if test="chargeMode > 0">
+                chargeMode = #{chargeMode},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+	<update id="updateCargo" parameterType="Cargo">
+        update cargo
+        <set>
+        	autoUpTime = #{autoUpTime},
+            <if test="shelve != 0">
+                shelve = #{shelve},
+            </if>
+             <if test="cargoName != null">
+                cargoName = #{cargoName},
+            </if>
+            <if test="packageType > 0">
+                packageType = #{packageType},
+            </if>
+            <if test="quoteCompany > 0">
+                quoteCompany = #{quoteCompany},
+            </if>
+            <if test="square > 0">
+                square = #{square},
+            </if>
+            <if test="weight > 0">
+                weight = #{weight},
+            </if>
+            <if test="tvratio > 0">
+                tvratio = #{tvratio},
+            </if>
+            <if test="quote > 0">
+                quote = #{quote},
+            </if>
+            <if test="remark != null">
+                remark = #{remark},
+            </if>
+            <if test="carLength >=0">
+                carLength = #{carLength},
+            </if>
+            <if test="carType >=0">
+                carType = #{carType},
+            </if>
+            <if test="operateTime != null">
+                operateTime = #{operateTime},
+            </if>
+            <if test="operateId != null">
+                operateId = #{operateId},
+            </if>
+            <if test="sendTime != null">
+            	sendTime = #{sendTime},
+            </if>
+            <if test="arrivalTime != null">
+            	arrivalTime = #{arrivalTime},
+            </if>
+            <if test="upShelveTime != null">
+            	upShelveTime = #{upShelveTime},
+            </if>
+            <if test="downShelveTime != null">
+            	downShelveTime = #{downShelveTime},
+            </if>
+            <if test="arrivalAdd != null">
+            	arrivalAdd = #{arrivalAdd},
+            </if>
+            <if test="startAdd != null">
+            	startAdd = #{startAdd},
+            </if>
+            <if test="province &gt; 0">
+                province = #{province},
+            </if>
+            <if test="city &gt; 0">
+                city = #{city},
+            </if>
+            <if test="county &gt; 0">
+                 county = #{county},
+            </if>
+            <if test="arrivalProvince &gt; 0">
+                arrivalProvince = #{arrivalProvince},
+            </if>
+            <if test="arrivalCity &gt; 0">
+                arrivalCity = #{arrivalCity},
+            </if>
+            <if test="arrivalCounty &gt; 0">
+                 arrivalCounty = #{arrivalCounty},
+            </if>
+            <if test="arrivalProvince2 &gt; 0">
+                arrivalProvince2 = #{arrivalProvince2},
+            </if>
+            <if test="arrivalCity2 &gt; 0">
+                arrivalCity2 = #{arrivalCity2},
+            </if>
+            <if test="arrivalCounty2 &gt; 0">
+                 arrivalCounty2 = #{arrivalCounty2},
+            </if>
+            <if test="arrivalAdd2 != null">
+            	arrivalAdd2 = #{arrivalAdd2},
+            </if>
+            <if test="arrivalProvince3 &gt; 0">
+                arrivalProvince3 = #{arrivalProvince3},
+            </if>
+            <if test="arrivalCity3 &gt; 0">
+                arrivalCity3 = #{arrivalCity3},
+            </if>
+            <if test="arrivalCounty3 &gt; 0">
+                 arrivalCounty3 = #{arrivalCounty3},
+            </if>
+            <if test="arrivalAdd3 != null">
+            	arrivalAdd3 = #{arrivalAdd3},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+    
+    <update id="updateCargoAutoUpTime" parameterType="Cargo">
+        update cargo
+        <set>
+            autoUpTime = null
+        </set>
+        where id = #{id}
+    </update>
+    
+    <update id="updateCargoShelve" parameterType="Cargo">
+        update cargo
+        <set>
+            <if test="shelve != 0">
+                shelve = #{shelve},
+            </if>
+            <if test="operateTime != null">
+                operateTime = #{operateTime},
+            </if>
+            <if test="operateId != null">
+                operateId = #{operateId},
+            </if>
+            <if test="sendTime != null">
+            	sendTime = #{sendTime},
+            </if>
+            <if test="arrivalTime != null">
+            	arrivalTime = #{arrivalTime},
+            </if>
+            <if test="upShelveTime != null">
+            	upShelveTime = #{upShelveTime},
+            </if>
+            <if test="downShelveTime != null">
+            	downShelveTime = #{downShelveTime},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <select id="selectCargoes" parameterType="Cargo" resultType="Cargo">
+        select * from cargo
+        <where>
+            shelve = 1
+            <if test="city &gt; 0">
+                and city = #{city}
+            </if>
+            <if test="arrivalCity &gt; 0">
+                and arrivalCity = #{arrivalCity}
+            </if>
+        </where>
+    </select>
+
+    <select id="selectCargoIds" parameterType="Cargo" resultType="java.lang.Long">
+        select id from cargo
+        <where>
+            shelve = 1
+            <if test="city &gt; 0">
+                and city = #{city}
+            </if>
+            <if test="arrivalCity &gt; 0">
+                and arrivalCity = #{arrivalCity}
+            </if>
+            <if test="weightMax &gt; 0">
+                <![CDATA[
+					and weight < #{weightMax}
+				]]>
+            </if>
+            <if test="weightMin &gt; 0">
+                <![CDATA[
+					and weight >= #{weightMin}
+				]]>
+            </if>
+            <if test="squareMax &gt; 0">
+                <![CDATA[
+					and square < #{squareMax}
+				]]>
+            </if>
+            <if test="squareMin &gt; 0">
+                <![CDATA[
+					and square >= #{squareMin}
+				]]>
+            </if>
+            <if test="carLength &gt; 0">
+                and carLength = #{carLength}
+            </if>
+            <if test="carType &gt; 0">
+                and carType = #{carType}
+            </if>
+        </where>
+        order by createTime desc
+    </select>
+
+    <sql id="selectCargo4IndexSql">
+        <where>
+            shelve = 1
+            <if test="go &gt; 0">
+                and city = #{go}
+            </if>
+            <if test="to &gt; 0">
+                and arrivalCity = #{to}
+            </if>
+                <if test="min &gt; 0">
+                    and weight >= #{min}
+                </if>
+                <if test="max &gt; 0">
+                    and weight &lt; #{max}
+                </if>
+                <if test="min1 &gt; 0">
+                    and square >= #{min1}
+                </if>
+                <if test="max1 &gt; 0">
+                    and square &lt; #{max1}
+                </if>
+            <if test="carLength &gt; 0">
+                and carLength = #{carLength}
+            </if>
+            <if test="carType &gt; 0">
+                and carType = #{carType}
+            </if>
+            <if test="attribute &gt; 0">
+                and attribute = #{attribute}
+            </if>
+            <if test="sendTime != null">
+                and sendTime &gt;= #{sendTime}  and sendTime &lt; date_add(#{sendTime}, interval 1 day)
+            </if>
+            <if test="chargeMode != null">
+                and chargeMode = #{chargeMode}
+            </if>
+        </where>
+    </sql>
+
+    <select id="selectCargo4Index" parameterType="hashmap" resultType="long">
+        select id from cargo
+        <include refid="selectCargo4IndexSql"/>
+             <if test="weight &gt; 0">
+              and   weight = #{weight}
+            </if>
+             <if test="square &gt; 0">
+              and   square = #{square}
+            </if>
+             order by id desc  limit #{start},#{pageSize}
+    </select>
+    
+      <select id="selectCargo4Indextj" parameterType="hashmap" resultType="long">
+        select c.id from cargo c,company_info d
+         <where>
+            c.shelve = 1
+            <if test="go &gt; 0">
+                and c.city = #{go}
+            </if>
+            <if test="to &gt; 0">
+                and c.arrivalCity = #{to}
+            </if>
+                <if test="min &gt; 0">
+                    and c.weight >= #{min}
+                </if>
+                <if test="max &gt; 0">
+                    and c.weight &lt; #{max}
+                </if>
+                <if test="min1 &gt; 0">
+                    and c.square >= #{min1}
+                </if>
+                <if test="max1 &gt; 0">
+                    and c.square &lt; #{max1}
+                </if>
+            <if test="carLength &gt; 0">
+                and c.carLength = #{carLength}
+            </if>
+            <if test="carType &gt; 0">
+                and c.carType = #{carType}
+            </if>
+            <if test="attribute &gt; 0">
+                and c.attribute = #{attribute}
+            </if>
+            <if test="sendTime != null">
+                and c.sendTime &gt;= #{sendTime}  and c.sendTime &lt; date_add(#{sendTime}, interval 1 day)
+            </if>
+            <if test="chargeMode != null">
+                and c.chargeMode = #{chargeMode}
+            </if>
+             <if test="weight &gt; 0">
+              and   c.weight = #{weight}
+            </if>
+             <if test="square &gt; 0">
+              and   c.square = #{square}
+            </if>
+             and c.userId=d.userId 
+        </where>  
+             order by      
+            <if test="tjcx==0">
+               d.zhl desc
+            </if>
+             <if test="tjcx==1">
+               d.jkl desc
+            </if>
+             <if test="tjcx==2">
+                d.jkl desc,d.jkl desc,sendTime desc
+            </if>
+            limit #{start},#{pageSize}
+    </select>
+
+    <select id="getCargo4IndexSum" parameterType="hashmap" resultType="long">
+        select count(*) from cargo
+        <include refid="selectCargo4IndexSql"/>
+    </select>
+    
+    <select id="getCargoListTotal" resultType="int">
+		select count(*) from cargo
+		<where>
+			userId = #{userId}
+			<if test="shelve &gt; 0">
+               and shelve=#{shelve}
+            </if>
+            <if test="shelve == 0">
+               and shelve != -1
+            </if>
+		</where>
+	</select>
+	
+	<select id="selectCargoList" resultType="Cargo">
+		select * from cargo
+		<where>
+			userId = #{userId}
+			<if test="shelve &gt; 0">
+               and shelve=#{shelve}
+            </if>
+            <if test="shelve == 0">
+               and shelve != -1
+            </if>
+		</where>
+		order by id desc
+		limit #{start},#{size}
+	</select>
+	
+	
+	<select id="selectCargo4ExperienceStoreIndex" parameterType="hashmap" resultType="long">
+        select id from cargo
+        where shelve =1
+        order by city=510500 desc,city=500000 desc,city=511500 desc ,city=510300 desc limit #{start},#{pageSize}
+    </select>
+    
+    <insert id="insertCargoStepOne" parameterType="com.friday.hgj.model.Cargo" useGeneratedKeys="true" keyProperty="cargo.id">
+		insert into cargo(
+			userId,cargoNo,cargoName,linkName,linkPhone,quoteCompany,packageType,insuranceStatus,coverage,insurRate,shelve,remark,createTime,operateTime,operateId,chargeMode
+		) values(
+			#{cargo.userId},#{cargo.cargoNo},#{cargo.cargoName},#{cargo.linkName},#{cargo.linkPhone},#{cargo.quoteCompany},#{cargo.packageType},#{cargo.insuranceStatus},#{cargo.coverage},
+			#{cargo.insurRate},#{cargo.shelve},#{cargo.remark},#{cargo.createTime},#{cargo.operateTime},#{cargo.operateId},#{cargo.chargeMode}
+		)
+	</insert>
+</mapper>

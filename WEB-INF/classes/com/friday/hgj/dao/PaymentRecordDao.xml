@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN' 'http://mybatis.org/dtd/mybatis-3-mapper.dtd' >
+<mapper namespace="com.friday.hgj.dao.PaymentRecordDao">
+	
+	<insert id="insert" parameterType="com.friday.hgj.model.PaymentRecord" useGeneratedKeys="true" keyProperty="id" >
+		insert into payment_record (accountId, userId, orderSerialNo,bank, province, city, cardNo, amount, mobile, `status`, returnCode, returnMsg, operateTime, operateId, lastUpdateTime)
+		values (#{accountId,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT}, #{orderSerialNo,jdbcType=VARCHAR}, #{bank,jdbcType=VARCHAR}, #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, #{cardNo,jdbcType=VARCHAR}, #{amount,jdbcType=INTEGER}, #{mobile,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{returnCode,jdbcType=VARCHAR}, #{returnMsg,jdbcType=VARCHAR}, #{operateTime,jdbcType=TIMESTAMP}, #{operateId,jdbcType=BIGINT}, #{lastUpdateTime,jdbcType=TIMESTAMP})
+	</insert>
+	
+	<update id="update" parameterType="com.friday.hgj.model.PaymentRecord" >
+	    update payment_record
+	    <set >
+	      <if test="accountId != null" >
+	        accountId = #{accountId,jdbcType=BIGINT},
+	      </if>
+	      <if test="userId != null" >
+	        userId = #{userId,jdbcType=BIGINT},
+	      </if>
+	      <if test="orderSerialNo != null" >
+	        orderSerialNo = #{orderSerialNo,jdbcType=VARCHAR},
+	      </if>
+	      <if test="bank != null" >
+	        bank = #{bank,jdbcType=VARCHAR},
+	      </if>
+	      <if test="province != null" >
+	        province = #{province,jdbcType=VARCHAR},
+	      </if>
+	      <if test="city != null" >
+	        city = #{city,jdbcType=VARCHAR},
+	      </if>
+	      <if test="cardNo != null" >
+	        cardNo = #{cardNo,jdbcType=VARCHAR},
+	      </if>
+	      <if test="amount != null" >
+	        amount = #{amount,jdbcType=INTEGER},
+	      </if>
+	      <if test="mobile != null" >
+	        mobile = #{mobile,jdbcType=VARCHAR},
+	      </if>
+	      <if test="status != null" >
+	        `status` = #{status,jdbcType=INTEGER},
+	      </if>
+	      <if test="returnCode != null" >
+	        returnCode = #{returnCode,jdbcType=VARCHAR},
+	      </if>
+	      <if test="returnMsg != null" >
+	        returnMsg = #{returnMsg,jdbcType=VARCHAR},
+	      </if>
+	      <if test="operateTime != null" >
+	        operateTime = #{operateTime,jdbcType=TIMESTAMP},
+	      </if>
+	      <if test="operateId != null" >
+	        operateId = #{operateId,jdbcType=BIGINT},
+	      </if>
+	      <if test="lastUpdateTime != null" >
+	        lastUpdateTime = #{lastUpdateTime,jdbcType=TIMESTAMP},
+	      </if>
+	    </set>
+	    where id = #{id,jdbcType=BIGINT}
+  </update>
+  
+  
+</mapper>

@@ -1,0 +1,170 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "微软雅黑";
+  font-size: 12px;
+  height: 100%;
+  background: #f3f3f3;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+li {
+  list-style: none;
+}
+input {
+  padding-left: 9px;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: "";
+  height: 0;
+  display: block;
+  clear: both;
+}
+.header {
+  background: url(http://192.168.2.50/statics/images/head.jpg);
+}
+.header .head {
+  width: 1024px;
+  margin: 0 auto;
+  padding: 13px 0px;
+}
+.header .head .tel {
+  float: left;
+  color: #ededed;
+}
+.header .head ul {
+  float: right;
+}
+.header .head ul li {
+  color: #ededed;
+  float: left;
+  line-height: 20px;
+}
+.header .head ul li a {
+  color: #ededed;
+}
+.header .head ul li a:hover {
+  color: #feaf51;
+}
+.header .head ul li .active {
+  color: #feaf51;
+}
+.header .head ul .user {
+  padding-left: 33px;
+  background: url(http://192.168.2.50/statics/images/user.png) no-repeat left;
+}
+.header .head ul .login {
+  margin-left: 24px;
+  color: #feaf51;
+}
+.header .head ul .test {
+  margin-left: 62px;
+}
+.logo_wrap {
+  width: 100%;
+  min-width: 1024px;
+  background-color: #fefefe;
+}
+.logo_wrap .logo {
+  width: 1024px;
+  margin: 0 auto;
+  padding: 53px 0px;
+}
+.content {
+  background: #f3f3f3;
+  padding-top: 31px;
+  padding-bottom: 65px;
+  z-index: -2;
+}
+.content .logo {
+  width: 1024px;
+  margin: 0 auto;
+  padding: 53px 0px;
+}
+.run {
+  padding-top: 120px;
+  height: 220px;
+  width: 390px;
+  margin: 0 auto;
+  background: url(http://192.168.2.50/statics/images/run.png) no-repeat 220px 135px;
+}
+.run h1 {
+  color: #332c2b;
+  font-size: 40px;
+  margin-bottom: 45px;
+}
+.run p {
+  font-size: 20px;
+  color: #252525;
+}
+.run .bttn {
+  margin-top: 50px;
+}
+.run .bttn a {
+  float: left;
+  display: block;
+  text-align: center;
+  line-height: 29px;
+}
+.run .bttn .home {
+  background: url(http://192.168.2.50/statics/images/btn_3.png) no-repeat;
+  width: 118px;
+  height: 29px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #ffab48;
+  margin-right: 35px;
+  margin-left: 25px;
+}
+.run .bttn .pgup {
+  height: 29px;
+  width: 118px;
+  outline: none;
+  background: url(http://192.168.2.50/statics/images/butn.png) no-repeat 0px 0px;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+}
+.run .bttn .pgup:link {
+  background-position: 0px 0px;
+}
+.run .bttn .pgup:visited {
+  background-position: 0px 0px;
+}
+.run .bttn .pgup:hover {
+  background-position: 0px -29px;
+}
+.run .bttn .pgup:active {
+  background-position: 0px -58px;
+}
+.footer {
+  padding: 28px 0px;
+  background: #f3f3f3;
+  min-width: 1024px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.footer .foot {
+  width: 1024px;
+  margin: 0 auto;
+}
+.footer .foot p {
+  line-height: 15px;
+  text-align: center;
+}
+.footer .foot p img {
+  border: none;
+}
+.introduce_color {
+  color: #feaf51;
+}

@@ -1,0 +1,914 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>拉货宝</title>
+<link href="css/common.css" rel="stylesheet" media="screen" type="text/css">
+<link href="css/style.css" rel="stylesheet" media="screen" type="text/css">
+<link href="css/rainbow.css" rel="stylesheet" media="screen" type="text/css">
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" type="text/css">
+<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+<script type="text/javascript"  src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery_public.js"></script>
+<script type="text/javascript" src="js/jquery-xzqh.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a.js"></script>
+<script>
+DD_belatedPNG.fix('.icon,.login_ttmr div.login_tisImg,.reg_titleBg,.search_box_hd');
+
+$(function(){
+	$(".publiccloseIe").click(function(){
+		$(".browserBox").hide();
+	});
+	$(window).resize(function(){ie6Pd()}); 
+	setTimeout("ie6Pd()");
+	$(window).scroll(function(){ie6Pd()});
+	setTimeout("browserBox()",1000);
+});
+
+function browserBox(){
+	if ($.browser.msie && ($.browser.version == "6.0") && !$.support.style){
+		$(".browserBox").fadeIn(1000);
+	};
+};
+function ie6Pd(){
+	$(".browserBox").css({"top":($(window).height()-$(".browserBox").height())+$(window).scrollTop()});
+};
+</script>
+<![endif]-->
+</head>
+<body>
+<!-- <div class="publicbox none">
+	<div class="publicbg"></div>
+	<div class="publiccurrent">
+		<div class="publictitle">　系统提示<a href="javascript:void(0)" class="publictitleBt icon publicclose"></a></div>
+		<div class="publiclr"><font class="publicpts"><i class="icon iconPts"></i> </font><font>收藏成功收藏<span class="num">50</span>成功收藏成功</div></font>
+		<div class="publicbst"><a href="javascript:void(0)">取 消</a><a href="javascript:void(0)" class="publicbt1">确 定</a></div>
+	</div>
+</div> -->
+<div class="publicbox none">
+	<div class="publicbg"></div>
+	<div class="publiccurrent">
+		<div class="publictitle">　系统提示<a href="javascript:void(0)" class="publictitleBt icon publicclose"></a></div>
+		<div class="publiclr"><font class="ft16">收藏成功收藏<span class="num">50</span>成功收藏成功</div></font><!--iconPts iconPcw iconPjg-->
+		<div class="publicbst"><a href="javascript:void(0)">取 消</a><a href="javascript:void(0)" class="publicbt1">确 定</a></div>
+	</div>
+</div>
+<div class="divBox" id="divBox">
+<!-- 登录 start -->
+	<div class="divBoxText">
+		<div class="divBoxBg" ></div>
+		<div class="divboxStyle user_login">
+			<div class="wh">
+				<a class="divBtColse icon" href="javascript:void(0)"></a>
+				<div class="user_loginBox">
+					<div class="login_title">
+						<div class="title loginTbbox"><a href="javascript:void(0)" class="select">司机登录</a><a href="javascript:void(0)">企业登录</a></div>
+						<div class="loginTb1">
+							<div class="loginTb">
+								<div class="loginSt"><span class="zcInptS"><font>帐号</font><input type="text" value="请输入手机号/车牌号" onblur="if(this.value==''){this.value='请输入手机号/车牌号'}" onfocus="if(this.value=='请输入手机号/车牌号'){this.value=''}else{this.select();}" /><i class="icon icon_userLog"></i></span></div>
+								<div class="loginSt"><span class="zcInptS"><font>密码</font><input type="password" /><i class="icon icon_userLog1"></i></span></div>
+								<div class="loginSt"><span class="loginSt1 zcInptS"><font>验证码</font><input type="text" value="输入六位数验证码" onblur="if(this.value==''){this.value='输入六位数验证码'}" onfocus="if(this.value=='输入六位数验证码'){this.value=''}else{this.select();}" class="login_yzm" /></span><a href="#" class="yzm_img"><img src="images/dianh.jpg"></a></div>
+								<div class="loginSt1 mt5">
+									<span class="jzmm"><b><input type="checkbox"/></b><font>记住我</font></span><a href="">忘记密码？</a>
+								</div>
+								<div class="loginSt1 mt5">
+									<span class="error_font">提示文字516516</span>
+								</div>
+								<div class="loginSt2 mt10"><a href="javascript:void(0)">登录</a></div>
+							</div>
+							<div class="loginTb">
+								<div class="loginSt"><span class="zcInptS"><font>帐号</font><input type="text" value="请输入企业全称" onblur="if(this.value==''){this.value='请输入企业全称'}" onfocus="if(this.value=='请输入企业全称'){this.value=''}else{this.select();}" /><i class="icon icon_userLog"></i></span></div>
+								<div class="loginSt"><span class="zcInptS"><font>密码</font><input type="password" /><i class="icon icon_userLog1"></i></span></div>
+								<div class="loginSt"><span class="loginSt1 zcInptS"><font>验证码</font><input type="text" value="输入六位数验证码" onblur="if(this.value==''){this.value='输入六位数验证码'}" onfocus="if(this.value=='输入六位数验证码'){this.value=''}else{this.select();}" class="login_yzm" /></span><a href="#" class="yzm_img"><img src="images/dianh.jpg"></a></div>
+								<div class="loginSt1 mt5">
+									<span class="jzmm"><b><input type="checkbox"/></b><font>记住我</font></span><a href="">忘记密码？</a>
+								</div>
+								<div class="loginSt1 mt5">
+									<span class="error_font">提示文字516516</span>
+								</div>
+								<div class="loginSt2 mt10"><a href="javascript:void(0)">登录</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="login_ttmr">
+						<div class="login_tis"><font>还没拉货宝账户？</font><a href="#">立即注册</a></div>
+						<div class="bannerBox">
+							<a href="#" target="_blank" class="login_tis1 mt20"><img src="images/banner1.jpg"></a>
+							<a href="#" target="_blank" class="login_tis1 mt20"><img src="images/banner2.jpg"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="wh none">
+				<a class="divBtColse icon" href="javascript:void(0)"></a>
+				<div class="user_loginBox">
+					<div class="reg_titleBg reg_Bg1"></div>
+					<div class="reg_titleFt mt5"><span>完成</span><font class="select">身份验证</font><font>重设密码</font></div>
+					<div class="reg_sjyz mt20"><span class="zcInptS"><font><input type="text" value="请输入手机号" onblur="if(this.value==''){this.value='请输入手机号'}" onfocus="if(this.value=='请输入手机号'){this.value=''}else{this.select();}" /></font><i class="icon icon_sjyz"></i></span><a href="javascript:void(0)" class="reg_sjbt icon">发送短信验证码<a><a href="#" class="reg_sjts">手机号码无法接收短信？</a></div>
+					<div class="reg_yzqr mt20"><span class="zcInptS"><input type="text" value="请输入6位短信验证码" onblur="if(this.value==''){this.value='请输入6位短信验证码'}" onfocus="if(this.value=='请输入6位短信验证码'){this.value=''}else{this.select();}" /></span></div>
+					<div class="reg_xyb mt30"><a href="#">下一步</a></div>
+				</div>
+			</div>
+			<div class="wh none">
+				<a class="divBtColse icon" href="javascript:void(0)"></a>
+				<div class="user_loginBox">
+					<div class="reg_titleBg reg_Bg2"></div>
+					<div class="reg_titleFt mt5"><span>完成</span><font>身份验证</font><font class="select">重设密码</font></div>
+					<div class="reg_pwd mt20"><font class="reg_pwdFt">新密码</font><span class="zcInptS"><font><input type="password" /><i class="icon icon_userLog1"></i></font></span></div>
+					<div class="reg_pwd mt20"><font class="reg_pwdFt">再次输入密码</font><span class="zcInptS"><font><input type="password" /><i class="icon icon_userLog1"></i></font></span></div>
+					<div class="reg_xyb mt30"><a href="#">下一步</a></div>
+				</div>
+			</div>
+			<div class="wh none">
+				<a class="divBtColse icon" href="javascript:void(0)"></a>
+				<div class="user_loginBox">
+					<div class="reg_titleBg reg_Bg3"></div>
+					<div class="reg_titleFt mt5"><span class="select">完成</span><font>身份验证</font><font>重设密码</font></div>
+					<div class="reg_pwdCg mt40"><i class="icon icon_pwdCg"></i><font>您的密码已重设，下次登录即可生效，请您妥善保管！</font></div>
+					<div class="reg_xyb mt30"><a href="#">下一步</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- 登录 end -->
+<!-- 注册 start -->
+	<div class="divBoxText">
+		<div class="divBoxBg" ></div>
+		<div class="divboxStyle user_login">
+			<a class="divBtColse icon" href="javascript:void(0)"></a>
+			<div class="user_loginBox" style="display:none;">
+				<div class="login_title">
+					<div class="title loginTbbox_1"><a href="javascript:void(0)" class="select">司机注册</a><a href="javascript:void(0)">企业注册</a></div>
+					<div class="loginTb1_1">
+						<div class="loginTb_1">
+							<div class="loginSt"><span class="zcInptS"><font>手机号</font><input type="text" value="请输入手机号" onblur="if(this.value==''){this.value='请输入手机号'}" onfocus="if(this.value=='请输入手机号'){this.value=''}else{this.select();}" /><i class="icon icon_userLog"></i></span></div>
+							<div class="loginSt"><span class="zcInptS"><font>密码</font><input type="text" /><i class="icon icon_userLog1"></i></span></div>
+							<div class="loginSt"><span class="loginSt1 zcInptS"><font>验证码</font><input type="text" value="输入六位数验证码" onblur="if(this.value==''){this.value='输入六位数验证码'}" onfocus="if(this.value=='输入六位数验证码'){this.value=''}else{this.select();}" class="login_yzm" /></span><a href="#" class="yzm_img"><img src="images/dianh.jpg"></a></div>
+							<div class="loginSt1 mt5">
+								<span class="error_font">提示文字516516</span>
+							</div>
+							<div class="loginSt2 mt15"><a href="javascript:void(0)">注册</a></div>
+						</div>
+						<div class="loginTb_1">
+							<div class="loginSt"><span><font>帐号</font><input type="text" value="请输入企业全称" onblur="if(this.value==''){this.value='请输入企业全称'}" onfocus="if(this.value=='请输入企业全称'){this.value=''}else{this.select();}" /><i class="icon icon_userLog"></i></span></div>
+							<div class="loginSt"><span><font>密码</font><input type="text" /><i class="icon icon_userLog1"></i></span></div>
+							<div class="loginSt"><span class="loginSt1"><font>验证码</font><input type="text" value="输入六位数验证码" onblur="if(this.value==''){this.value='输入六位数验证码'}" onfocus="if(this.value=='输入六位数验证码'){this.value=''}else{this.select();}" class="login_yzm" /></span><a href="#" class="yzm_img"><img src="images/dianh.jpg"></a></div>
+							<div class="loginSt1 mt5">
+								<span class="error_font">提示文字516516</span>
+							</div>
+							<div class="loginSt2 mt15"><a href="javascript:void(0)">注册</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="login_ttmr">
+					<div class="login_tis"><font>还没拉货宝账户？</font><a href="#">立即登录</a></div>
+					<div class="login_tisFt mt60"><a href="#"><i class="icon icon_wxts"></i><font>注册遇到问题？</font></a></div>
+					<div class="login_tisImg mt60"><i class="icon"></i><div><span>免费服务电话:</span><font>400 888 8888 </font></div></div>
+					<div class="login_tisKf mt15"><a href="#"><img src="images/qqlogo.jpg"></a></div>
+				</div>
+			</div>
+			
+			<div class="wh">
+				<div class="user_loginBox">
+					<div class="login_title pd5075">
+						<div class="login_Ok"><i class="icon iconPts"></i><span>注册成功！</span></div>
+						<div class="login_zl"><a class="orderTjbt1 deabxboxBt" href="javascript:void(0)">稍后完善</a><a href="javascript:void(0)">完善信息马上拉货</a></div><!--企业的改成 完善信息发布货源 -->
+					</div>
+					<div class="login_ttmr">
+						<div class="login_tis1_1"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- 注册 end -->
+</div>
+<div class="wh">
+	<div class="wh header">
+		<div class="wh_mar re">
+			早上好！ 欢迎访问 Lahuo8.com 拉货宝 ！  服务热线 400-888-8888
+			<!-- <div class="ab head_sign"><a href="javascript:void(0)" class="divBoxButton">登录</a>|<a href="javascript:void(0)" class="divBoxButton">注册</a>|<a href="javascript:void(0)">企业登录</a></div> -->
+			<div class="ab head_sign"><font>Hi，<a href="#" target="_blank">13893303914</a></font><a href="#">我的订单</a><a href="#" class="orange">退出</a></div>
+		</div>
+	</div>
+</div>
+<div class="wh">
+	<div class="wh_mar hd">
+	<!------------ head start ------------>
+		<div class="wh re hd185">
+			<font class="logo"></font>
+			<div class="ab search_box">
+				<div class="search_box_hd">货源搜索</div>
+				<div class="wh mt10 search_kuaisu zcInptS1">
+					<span><i>发货城市</i><font class="relative citybt">
+						<div class="citypicker">
+                       
+                        <input type="text" value="请输入出发城市" onblur="if(this.value==''){this.style.color='#ccc';value='请输入出发城市'}" onfocus="if(this.value=='请输入出发城市'){this.style.color='#333';value=''}else{this.style.color='#333';select();}"></div>
+						<div class="citybox">
+							<div class="cityTb">
+								<div class="cityTitle"><a href="#" class="select">省</a><a href="#">市</a></div>
+								<div class="citycentent"><ul>
+									<li><a href="/10005">北京</a></li>
+									<li><a href="/10005">北京</a></li>
+									<li><a href="/10005">北京</a></li>
+									<li><a href="/10005">北京</a></li>
+									<li><a href="/10005">北京</a></li>
+									<li><a href="/10005">北京</a></li>
+									<li><a href="/10005">北京</a></li>
+									<li><a href="/10005">北京</a></li>
+									<li><a href="/10005">北京</a></li>
+								</ul></div>
+							</div>
+						</div>
+					</font></span>
+					<div class="control-group">
+						<div class="form-group">
+							<div class="controls input-group date form_date  col-md-5" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2">
+								<span><span class="input-group-addon"><i class="glyphicon-calendar">出发日期</i></span><font><input  type="text" value="点击选择日期" onblur="if(this.value==''){this.style.color='#ccc';value='点击选择日期'}" onfocus="if(this.value=='点击选择日期'){this.style.color='#333';value=''}else{this.style.color='#333';select();}"></font></span>
+							</div>
+						</div>
+					</div>
+					<span><i>到货城市</i><font class="relative citybt">
+						<input class="citypicker" type="text" value="可不填写" onblur="if(this.value==''){this.style.color='#ccc';value='可不填写'}" onfocus="if(this.value=='可不填写'){this.style.color='#333';value=''}else{this.style.color='#333';select();}">
+						
+					</font></span>
+					<span><a href="javascript:void(0)">搜货源</a></span>
+					
+				</div>
+			</div>
+		</div>
+	<!------------ head end ------------>
+	<!------------ 最新货源 start ------------>
+		<div class="wh mt20">
+			<ul class="fl news_list" id="news_list">
+				<li class="first">最新货源</li>
+				<li><a href="javascript:void(0)"><font class="time">04--20</font><font class="place">成都成都 --- 乌鲁木齐</font><font class="price"><span class="style">白酒</span><font class="moneyStylebox"><span class="money">600</span><span class="unit">元 / 吨</span></font><span class="unitPrice">278.48吨</span></font><font class="more"><font class="ftwl">不限车长</font><font class="ftw2">半封闭车</font></font></a></li>
+				<li><a href="javascript:void(0)"><font class="time">04--20</font><font class="place">成都成都 --- 乌鲁木齐</font><font class="price"><span class="style">白酒</span><font class="moneyStylebox"><span class="money">6000.99</span><span class="unit">元 / 吨</span></font><span class="unitPrice">2718.48吨</span></font><font class="more"><font class="ftwl">不限车长</font><font class="ftw2">半封闭车</font></font></a></li>
+				<li><a href="javascript:void(0)"><font class="time">04--20</font><font class="place">成都成都 --- 乌鲁木齐</font><font class="price"><span class="style">白酒</span><font class="moneyStylebox"><span class="money">60</span><span class="unit">元 / 吨</span></font><span class="unitPrice">27吨</span></font><font class="more"><font class="ftwl">不限车长</font><font class="ftw2">半封闭车</font></font></a></li>
+				<li><a href="javascript:void(0)"><font class="time">04--20</font><font class="place">成都成都 --- 乌鲁木齐</font><font class="price"><span class="style">白酒</span><font class="moneyStylebox"><span class="money">600.99</span><span class="unit">元 / 吨</span></font><span class="unitPrice">278.48吨</span></font><font class="more"><font class="ftwl">不限车长</font><font class="ftw2">半封闭车</font></font></a></li>
+				<li><a href="javascript:void(0)"><font class="time">04--20</font><font class="place">成都成都 --- 乌鲁木齐</font><font class="price"><span class="style">白酒</span><font class="moneyStylebox"><span class="money">600</span><span class="unit">元 / 吨</span></font><span class="unitPrice">278.48吨</span></font><font class="more"><font class="ftwl">不限车长</font><font class="ftw2">半封闭车</font></font></a></li>
+				<li><a href="javascript:void(0)"><font class="time">04--20</font><font class="place">成都成都 --- 乌鲁木齐</font><font class="price"><span class="style">白酒</span><font class="moneyStylebox"><span class="money">6000.99</span><span class="unit">元 / 吨</span></font><span class="unitPrice">27吨</span></font><font class="more"><font class="ftwl">不限车长</font><font class="ftw2">半封闭车</font></font></a></li>
+				<li><a href="javascript:void(0)"><font class="time">04--20</font><font class="place">成都成都 --- 乌鲁木齐</font><font class="price"><span class="style">白酒</span><font class="moneyStylebox"><span class="money">600</span><span class="unit">元 / 吨</span></font><span class="unitPrice">278.48吨</span></font><font class="more"><font class="ftwl">不限车长</font><font class="ftw2">半封闭车</font></font></a></li>
+			</ul>
+			<div class="banner_box fr"><a href="#" target="_blank"><img src="images/banner.jpg"></a></div>
+		</div>
+	<!------------ 最新货源 end ------------>
+	<!------------ 条件筛选 start ------------>
+		<div class="term_box mt25">
+			<ul class="term_place">
+				<li>
+					<div class="term_pl_sx zcInptS1">
+						<div class="first"><div class="term_pl_Bt"><a href="#">搜索</a></div><font>出发地</font><input id="test3" type="text" value="发货城市" onblur="if(this.value==''){this.style.color='#ccc';value='发货城市'}" onfocus="if(this.value=='发货城市'){this.style.color='#333';value=''}else{this.style.color='#333';select();}"/></div>
+						<div><font>目的地</font><input id="test4" type="text" value="可不填" onblur="if(this.value==''){this.style.color='#ccc';value='可不填'}" onfocus="if(this.value=='可不填'){this.style.color='#333';value=''}else{this.style.color='#333';select();}"/></div>
+					</div>
+					<div class="term_pl_box bb1">
+						<div class="name">出发地：</div>
+						<div class="term_pl_list">
+							<div><a href="javascript:void(0)">成都</a> （当前位置定位）</div>
+							<div><a href="javascript:void(0)" class="select">不限</a><a href="javascript:void(0)">北京</a><a href="javascript:void(0)">上海</a><a href="javascript:void(0)">广州</a><a href="javascript:void(0)">深圳</a><a href="javascript:void(0)">杭州</a><a href="javascript:void(0)">成都</a></div>
+						</div>
+					</div>
+					<div class="term_pl_box">
+						<div class="name">目的地：</div>
+						<div class="term_pl_list">
+							<div><a href="javascript:void(0)" class="select">不限</a><a href="javascript:void(0)">北京</a><a href="javascript:void(0)">上海</a><a href="javascript:void(0)">广州</a><a href="javascript:void(0)">深圳</a><a href="javascript:void(0)">杭州</a><a href="javascript:void(0)">成都</a></div>
+						</div>
+					</div>
+				</li>
+				<!--<li>
+					<div class="name">类　型：</div>
+					<div class="term_pl_list">
+						<div><a href="javascript:void(0)" class="select">不限</a><a href="javascript:void(0)" class="termStyle select"><i class="icon"></i>零担</a><a href="javascript:void(0)" class="termStyle"><i class="icon"></i>整车</a></div>
+					</div>
+				</li>-->
+				<li>
+					<div class="name">数　量：</div>
+					<div class="term_pl_list">
+						<div class="term_pl_list3" id="Tabdiv"><font class="select"><i class="icon"></i>按重量</font><font><i class="icon"></i>按方量</font></div>
+						<div class="tab_div" id="tab_div">
+							<div><a href="javascript:void(0)" class="select">不限</a><a href="javascript:void(0)">5吨以下</a><a href="javascript:void(0)">5-10吨</a><a href="javascript:void(0)">10-20吨</a><a href="javascript:void(0)">20-30吨</a><a href="javascript:void(0)">30吨以上</a></div>
+							<div><a href="javascript:void(0)" class="select">不限11</a><a href="javascript:void(0)">5吨以下</a><a href="javascript:void(0)">5-10吨</a><a href="javascript:void(0)">10-20吨</a><a href="javascript:void(0)">20-30吨</a><a href="javascript:void(0)">30吨以上</a></div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="name">车　长：</div>
+					<div class="term_pl_list">
+						<div><a href="javascript:void(0)" class="select">不限</a><a href="javascript:void(0)">9米</a><a href="javascript:void(0)">10米</a><a href="javascript:void(0)">13米</a><a href="javascript:void(0)">17米</a></div>
+					</div>
+				</li>
+				<li class="bd0">
+					<div class="name">车　型：</div>
+					<div class="term_pl_list">
+						<div><a href="javascript:void(0)" class="select">不限</a><a href="javascript:void(0)">牵引</a><a href="javascript:void(0)">高栏</a><a href="javascript:void(0)">货柜</a><a href="javascript:void(0)">平板</a></div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	<!------------ 条件筛选 end ------------>
+	<!------------ 产品列表 start ------------>
+		<div class="wh list_paix mt20">
+			<div class="list_pub_title" id="list_paix">
+				<a href="#" class="select">最新货源</a><a href="#">竞拍价</a><a href="#">一口价</a><!-- <div class="select_jiage"><span>单价排列</span><font><a href="#">价格由低到高</a><a href="#">价格由高到低</a></font></div> -->
+			</div>
+		</div>
+		<ul class="pub_box mt10">
+			<li id="container">
+				
+				<!--竞拍报价开始-->
+				<div class="pub_list cell">
+					<div class="pub_ltbd">
+						<div class="pub_title wh">
+							<i class="icon icon_mapzb"></i>
+							<div class="pub_more_box">
+								<div class="title">成都成都...<font>新都新都区...</font></div>
+								<!--<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>-->
+								<div class="blue2">4月21日</div>
+							</div>
+                            <div class="jintin">
+							<i class="icon icon_hyjt"></i><span class="sevsm">经停3站</span>
+                            </div>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<!--<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>-->
+								<div class="blue2">4月21日</div>
+							</div>
+						</div>
+						<div class="wh pub_gg_box mt20">
+							<div class="title">
+                             <i class="icon icon_jpbj"></i>
+                             <!--白色背景块-->
+                             <i class="icon icon_kb" style="display:none"></i>
+                             <!--白色背景块结束-->
+                            1800<font>元 / 吨</font></div>
+							<div class="current t_c">140吨<font> / 200方/</font>肥料肥料肥</div>
+							<div class="current"><i class="icon icon_gg"></i><font>高栏  9.4米<span>已有<strong>5</strong>人申请</span></font></div>
+						</div>
+					</div>
+                    <div class=" pub_djs ">
+                            <i class="icon icon_djs"></i>
+                            <font>倒计时<strong>75</strong>小时<strong>54</strong>分钟<strong>02</strong>秒</font>
+                            </div>
+					<div class="pub_lxfs wh"><a class="btn_blue" href="javascript:void(0)">查看详情</a><a href="#" class="pub_maps"><i class="icon icon_map"></i><span>查看地图</span></a><a href="javascript:void(0)" class="divBox_Button"><i class="icon icon_collec"></i><span>收藏</span></a></div>
+				</div>
+				<!--竞拍报价结束-->
+				<!--一口价开始-->
+				<div class="pub_list cell">
+					<div class="pub_ltbd">
+						<div class="wh pub_title">
+							<i class="icon icon_mapzb"></i>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<!--<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>-->
+								<div class="blue2">4月21日</div>
+							</div>
+							<div class="jintin">
+							<i class="icon icon_hyjt"></i><span class="sevsm">经停宝鸡</span>
+                            </div>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<!--<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>-->
+								<div class="blue2">4月21日</div>
+							</div>
+						</div>
+						<div class="wh pub_gg_box mt20">
+                           
+							<div class="title">
+                             <i class="icon icon_ykj"></i>
+                            1800<font>元 / 吨</font></div>
+							<div class="current t_c">140吨<font> / 200方/</font>肥料</div>
+							<div class="current"><i class="icon icon_gg"></i><font>高栏  9.4米<span>已有<strong>5</strong>人申请</span></font></div>
+						</div>
+					</div>
+					<div class="pub_lxfs wh"><a class="btn_blue" href="javascript:void(0)">查看详情</a><a href="#" class="pub_maps"><i class="icon icon_map"></i><span>查看地图</span></a><a href="javascript:void(0)" class="divBox_Button"><i class="icon icon_collec"></i><span>收藏</span></a></div>
+				</div>
+				<!--一口价结束-->
+				<div class="pub_list cell">
+					<div class="pub_ltbd">
+						<div class="wh pub_title">
+							<i class="icon icon_mapzb"></i>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>
+								<div class="time">4月21日</div>
+							</div>
+							<i class="icon icon_mubiao"></i>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>
+								<div class="time">4月21日</div>
+							</div>
+						</div>
+						<div class="wh pub_gg_box mt20">
+							<div class="title">1800<font>元 / 吨<span>肥料</span></font></div>
+							<div class="current">140吨<font> / 200方/</font>整车</div>
+							<div class="current"><i class="icon icon_gg"></i><font>高栏  9.4米</font></div>
+							<div class="pub_pingfen wh mt30"><span class="first"><a class="moneyb" href="#">价格不错</a>63%</span><span><a class="moneyd" href="#">价格偏低</a>37%</span></div>
+						</div>
+					</div>
+					<div class="pub_lxfs wh"><a class="bt divBox_Button" href="javascript:void(0)">我要拉货</a><a href="#" class="pub_maps"><i class="icon icon_map"></i><span>查看地图</span></a><a href="javascript:void(0)" class="divBox_Button"><i class="icon icon_collec1"></i><span>已收藏</span></a></div>
+				</div>
+                <div class="pub_list cell">
+					<div class="pub_ltbd">
+						<div class="wh pub_title">
+							<i class="icon icon_mapzb"></i>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>
+								<div class="time">4月21日</div>
+							</div>
+							<i class="icon icon_mubiao"></i>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>
+								<div class="time">4月21日</div>
+							</div>
+						</div>
+						<div class="wh pub_gg_box mt20">
+							<div class="title">1800<font>元 / 吨<span>肥料</span></font></div>
+							<div class="current">140吨<font> / 200方/</font>整车</div>
+							<div class="current"><i class="icon icon_gg"></i><font>高栏  9.4米</font></div>
+							<div class="pub_pingfen wh mt30"><span class="first"><a class="moneyb" href="#">价格不错</a>63%</span><span><a class="moneyd" href="#">价格偏低</a>37%</span></div>
+						</div>
+					</div>
+					<div class="pub_lxfs wh"><a class="bt divBox_Button" href="javascript:void(0)">我要拉货</a><a href="#" class="pub_maps"><i class="icon icon_map"></i><span>查看地图</span></a><a href="javascript:void(0)" class="divBox_Button"><i class="icon icon_collec"></i><span>收藏</span></a></div>
+				</div>
+                <div class="pub_list cell">
+					<div class="pub_ltbd">
+						<div class="wh pub_title">
+							<i class="icon icon_mapzb"></i>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>
+								<div class="time">4月21日</div>
+							</div>
+							<i class="icon icon_mubiao"></i>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>
+								<div class="time">4月21日</div>
+							</div>
+						</div>
+						<div class="wh pub_gg_box mt20">
+							<div class="title">1800<font>元 / 吨<span>肥料</span></font></div>
+							<div class="current"><i class="icon icon_gg"></i><font>高栏  9.4米</font></div>
+							<div class="pub_pingfen wh mt30"><span class="first"><a class="moneyb" href="#">价格不错</a>63%</span><span><a class="moneyd" href="#">价格偏低</a>37%</span></div>
+						</div>
+					</div>
+					<div class="pub_lxfs wh"><a class="bt divBox_Button" href="javascript:void(0)">我要拉货</a><a href="#" class="pub_maps"><i class="icon icon_map"></i><span>查看地图</span></a><a href="javascript:void(0)" class="divBox_Button"><i class="icon icon_collec"></i><span>收藏</span></a></div>
+				</div>
+				<!--<div class="pub_list cell">
+					<div class="pub_ltbd">
+						<div class="wh pub_title">
+							<i class="icon icon_mapzb"></i>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>
+								<div class="time">4月21日</div>
+							</div>
+							<i class="icon icon_mubiao"></i>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>
+								<div class="time">4月21日</div>
+							</div>
+						</div>
+						<div class="wh pub_gg_box mt20">
+							<div class="title">1800<font>元 / 吨<span>肥料</span></font></div>
+							<div class="current"><i class="icon icon_gg"></i><font>高栏  9.4米</font></div>
+							<div class="pub_pingfen wh mt30"><span class="first"><a class="moneyb" href="#">价格不错</a>63%</span><span><a class="moneyd" href="#">价格偏低</a>37%</span></div>
+						</div>
+					</div>
+					<div class="pub_lxfs wh"><a class="bt divBox_Button" href="javascript:void(0)">我要拉货</a><a href="#" class="pub_maps"><i class="icon icon_map"></i><span>查看地图</span></a><a href="javascript:void(0)" class="divBox_Button"><i class="icon icon_collec1"></i><span>已收藏</span></a></div>
+				</div>
+				<div class="pub_list cell">
+					<div class="pub_ltbd">
+						<div class="wh pub_title">
+							<i class="icon icon_mapzb"></i>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>
+								<div class="time">4月21日</div>
+							</div>
+							<i class="icon icon_mubiao"></i>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>
+								<div class="time">4月21日</div>
+							</div>
+						</div>
+						<div class="wh pub_gg_box mt20">
+							<div class="title">1800<font>元 / 吨<span>肥料</span></font></div>
+							<div class="current">140吨<font> / 200方/</font>整车</div>
+							<div class="current"><i class="icon icon_gg"></i><font>高栏  9.4米</font></div>
+							<div class="pub_pingfen wh mt30"><span class="first"><a class="moneyb" href="#">价格不错</a>63%</span><span><a class="moneyd" href="#">价格偏低</a>37%</span></div>
+						</div>
+					</div>
+					<div class="pub_lxfs wh"><a class="bt divBox_Button" href="javascript:void(0)">我要拉货</a><a href="#" class="pub_maps"><i class="icon icon_map"></i><span>查看地图</span></a><a href="javascript:void(0)" class="divBox_Button"><i class="icon icon_collec"></i><span>收藏</span></a></div>
+				</div>
+				<div class="pub_list cell">
+					<div class="pub_ltbd">
+						<div class="wh pub_title">
+							<i class="icon icon_mapzb"></i>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>
+								<div class="time">4月21日</div>
+							</div>
+							<i class="icon icon_mubiao"></i>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>
+								<div class="time">4月21日</div>
+							</div>
+						</div>
+						<div class="wh pub_gg_box mt20">
+							<div class="title">1800<font>元 / 吨<span>肥料</span></font></div>
+							<div class="current"><i class="icon icon_gg"></i><font>高栏  9.4米</font></div>
+							<div class="pub_pingfen wh mt30"><span class="first"><a class="moneyb" href="#">价格不错</a>63%</span><span><a class="moneyd" href="#">价格偏低</a>37%</span></div>
+						</div>
+					</div>
+					<div class="pub_lxfs wh"><a class="bt divBox_Button" href="javascript:void(0)">我要拉货</a><a href="#" class="pub_maps"><i class="icon icon_map"></i><span>查看地图</span></a><a href="javascript:void(0)" class="divBox_Button"><i class="icon icon_collec1"></i><span>已收藏</span></a></div>
+				</div>
+				<div class="pub_list cell">
+					<div class="pub_ltbd">
+						<div class="wh pub_title">
+							<i class="icon icon_mapzb"></i>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>
+								<div class="time">4月21日</div>
+							</div>
+							<i class="icon icon_mubiao"></i>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>
+								<div class="time">4月21日</div>
+							</div>
+						</div>
+						<div class="wh pub_gg_box mt20">
+							<div class="title">1800<font>元 / 吨<span>肥料</span></font></div>
+							<div class="current">140吨<font> / 200方/</font>整车</div>
+							<div class="pub_pingfen wh mt30"><span class="first"><a class="moneyb" href="#">价格不错</a>63%</span><span><a class="moneyd" href="#">价格偏低</a>37%</span></div>
+						</div>
+					</div>
+					<div class="pub_lxfs wh"><a class="bt divBox_Button" href="javascript:void(0)">我要拉货</a><a href="#" class="pub_maps"><i class="icon icon_map"></i><span>查看地图</span></a><a href="javascript:void(0)" class="divBox_Button"><i class="icon icon_collec"></i><span>收藏</span></a></div>
+				</div>
+				<div class="pub_list cell">
+					<div class="pub_ltbd">
+						<div class="wh pub_title">
+							<i class="icon icon_mapzb"></i>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>
+								<div class="time">4月21日</div>
+							</div>
+							<i class="icon icon_mubiao"></i>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>
+								<div class="time">4月21日</div>
+							</div>
+						</div>
+						<div class="wh pub_gg_box mt20">
+							<div class="title">1800<font>元 / 吨<span>肥料</span></font></div>
+							<div class="current">140吨<font> / 200方/</font>整车</div>
+							<div class="current"><i class="icon icon_gg"></i><font>高栏  9.4米</font></div>
+							<div class="pub_pingfen wh mt30"><span class="first"><a class="moneyb" href="#">价格不错</a>63%</span><span><a class="moneyd" href="#">价格偏低</a>37%</span></div>
+						</div>
+					</div>
+					<div class="pub_lxfs wh"><a class="bt divBox_Button" href="javascript:void(0)">我要拉货</a><a href="#" class="pub_maps"><i class="icon icon_map"></i><span>查看地图</span></a><a href="javascript:void(0)" class="divBox_Button"><i class="icon icon_collec"></i><span>收藏</span></a></div>
+				</div>
+				<div class="pub_list cell">
+					<div class="pub_ltbd">
+						<div class="wh pub_title">
+							<i class="icon icon_mapzb"></i>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>
+								<div class="time">4月21日</div>
+							</div>
+							<i class="icon icon_mubiao"></i>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>
+								<div class="time">4月21日</div>
+							</div>
+						</div>
+						<div class="wh pub_gg_box mt20">
+							<div class="title">1800<font>元 / 吨<span>肥料</span></font></div>
+							<div class="current">140吨<font> / 200方/</font>整车</div>
+							<div class="current"><i class="icon icon_gg"></i><font>高栏  9.4米</font></div>
+							<div class="pub_pingfen wh mt30"><span class="first"><a class="moneyb" href="#">价格不错</a>63%</span><span><a class="moneyd" href="#">价格偏低</a>37%</span></div>
+						</div>
+					</div>
+					<div class="pub_lxfs wh"><a class="bt divBox_Button" href="javascript:void(0)">我要拉货</a><a href="#" class="pub_maps"><i class="icon icon_map"></i><span>查看地图</span></a><a href="javascript:void(0)" class="divBox_Button"><i class="icon icon_collec1"></i><span>已收藏</span></a></div>
+				</div>
+				<div class="pub_list cell">
+					<div class="pub_ltbd">
+						<div class="wh pub_title">
+							<i class="icon icon_mapzb"></i>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>
+								<div class="time">4月21日</div>
+							</div>
+							<i class="icon icon_mubiao"></i>
+							<div class="pub_more_box">
+								<div class="title">成都成都<font>新都区</font></div>
+								<div class="current" title="科华南路北一段136号">科华南路北一段13...</div>
+								<div class="time">4月21日</div>
+							</div>
+						</div>
+						<div class="wh pub_gg_box mt20">
+							<div class="title">1800<font>元 / 吨<span>肥料</span></font></div>
+							<div class="current">140吨<font> / 200方/</font>整车</div>
+							<div class="current"><i class="icon icon_gg"></i><font>高栏  9.4米</font></div>
+							<div class="pub_pingfen wh mt30"><span class="first"><a class="moneyb" href="#">价格不错</a>63%</span><span><a class="moneyd" href="#">价格偏低</a>37%</span></div>
+						</div>
+					</div>
+					<div class="pub_lxfs wh"><a class="bt divBox_Button" href="javascript:void(0)">我要拉货</a><a href="#" class="pub_maps"><i class="icon icon_map"></i><span>查看地图</span></a><a href="javascript:void(0)" class="divBox_Button"><i class="icon icon_collec"></i><span>收藏</span></a></div>
+				</div>
+				-->
+				
+			</li>
+		</ul>
+		<div class="wh mt25 paging"><a href="#" class="pag"><i class="icon"></i></a><a href="#" class="select">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a><font>...</font><a href="#">17</a><a href="#">18</a><a href="#">19</a><a href="#" class="last"><i class="icon"></i></a></div>
+	<!------------ 产品列表 end ------------>
+	<!------------ 条件筛选 start ------------>
+		<div class="term_box mt25">
+			<ul class="term_place">
+				<li>
+					<div class="term_pl_sx zcInptS1">
+						<div class="first"><div class="term_pl_Bt"><a href="#">搜索</a></div><font>出发地：</font><input id="test5" type="text" value="发货城市" onblur="if(this.value==''){this.value='发货城市'}" onfocus="if(this.value=='发货城市'){this.value=''}else{this.select();}" /></div>
+						<div><font>目的地：</font><input id="test6" type="text" value="可不填" onblur="if(this.value==''){this.value='可不填'}" onfocus="if(this.value=='可不填'){this.value=''}else{this.select();}"/></div>
+					</div>
+					<div class="term_pl_box bb1">
+						<div class="name">出发地：</div>
+						<div class="term_pl_list">
+							<div><a href="javascript:void(0)" class="select">成都</a> （当前位置定位）</div>
+							<div><a href="javascript:void(0)">不限</a><a href="javascript:void(0)">北京</a><a href="javascript:void(0)">上海</a><a href="javascript:void(0)">广州</a><a href="javascript:void(0)">深圳</a><a href="javascript:void(0)">杭州</a><a href="javascript:void(0)">成都</a></div>
+						</div>
+					</div>
+					<div class="term_pl_box">
+						<div class="name">目的地：</div>
+						<div class="term_pl_list">
+							<div><a href="javascript:void(0)" class="select">不限</a><a href="javascript:void(0)">北京</a><a href="javascript:void(0)">上海</a><a href="javascript:void(0)">广州</a><a href="javascript:void(0)">深圳</a><a href="javascript:void(0)">杭州</a><a href="javascript:void(0)">成都</a></div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="name">类　型：</div>
+					<div class="term_pl_list">
+						<div><a href="javascript:void(0)" class="select">不限</a><a href="javascript:void(0)" class="termStyle select"><i class="icon"></i>零担</a><a href="javascript:void(0)" class="termStyle"><i class="icon"></i>整车</a></div>
+					</div>
+				</li>
+				<li>
+					<div class="name">数　量：</div>
+					<div class="term_pl_list">
+						<div class="term_pl_list3" id="Tabdiv1"><font class="select"><i class="icon"></i>按重量</font><font><i class="icon"></i>按方量</font></div>
+						<div class="tab_div" id="tab_div1">
+							<div><a href="javascript:void(0)" class="select">不限</a><a href="javascript:void(0)">5吨以下</a><a href="javascript:void(0)">5-10吨</a><a href="javascript:void(0)">10-20吨</a><a href="javascript:void(0)">20-30吨</a><a href="javascript:void(0)">30吨以上</a></div>
+							<div><a href="javascript:void(0)" class="select">不限11</a><a href="javascript:void(0)">5吨以下</a><a href="javascript:void(0)">5-10吨</a><a href="javascript:void(0)">10-20吨</a><a href="javascript:void(0)">20-30吨</a><a href="javascript:void(0)">30吨以上</a></div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="name">车　长：</div>
+					<div class="term_pl_list">
+						<div><a href="javascript:void(0)" class="select">不限</a><a href="javascript:void(0)">9米</a><a href="javascript:void(0)">10米</a><a href="javascript:void(0)">13米</a><a href="javascript:void(0)">17米</a></div>
+					</div>
+				</li>
+				<li class="bd0">
+					<div class="name">车　型：</div>
+					<div class="term_pl_list">
+						<div><a href="javascript:void(0)" class="select">不限</a><a href="javascript:void(0)">牵引</a><a href="javascript:void(0)">高栏</a><a href="javascript:void(0)">货柜</a><a href="javascript:void(0)">平板</a></div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	<!------------ 条件筛选 end ------------>
+	</div>
+</div>
+<!------------ footer start ------------>
+<div class="footer wh mt30">
+	<div class="wh_mar">
+		<div class="wh mt10">
+			<div class="footer_logo"></div>
+			<div class="footer_lx">
+				<div></div>
+				<a href="#" title="联系我吧"></a>
+			</div>
+			<div class="footer_yq">
+				<div>服务企业</div>
+				<div>
+					<span><img src="images/foot_img/foot_1.jpg" /></span>
+					<span><img src="images/foot_img/foot_2.jpg" /></span>
+					<span><img src="images/foot_img/foot_3.jpg" /></span>
+					<span><img src="images/foot_img/foot_4.jpg" /></span>
+					<span><img src="images/foot_img/foot_5.jpg" /></span>
+					<span><img src="images/foot_img/foot_6.jpg" /></span>
+					<span><img src="images/foot_img/foot_7.jpg" /></span>
+					<span><img src="images/foot_img/foot_8.jpg" /></span>
+					<span><img src="images/foot_img/foot_9.jpg" /></span>
+					<span><img src="images/foot_img/foot_10.jpg" /></span>
+				</div>
+			</div>
+		</div>
+		<div class="wh mt20 footer_more">
+			<!-- <a href="#" target="_blank">关于我们</a>|<a href="#" target="_blank">联系我们</a>|<a href="#" target="_blank">友情连接</a>|<a href="#" target="_blank">直营站点</a><br/> -->copyright 2013 LYUN.COM ALL Rights Reserved.京 ICP备130339号
+		</div>
+	</div>
+</div>
+<!------------ footer end ------------>
+<script>
+;(function($){
+   var 
+   //参数
+   setting={
+      column_width:326,//列宽
+	  column_className:'waterfall_column',//列的类名
+	  column_space:10,//列间距
+	  cell_selector:'.cell',//要排列的砖块的选择器，context为整个外部容器
+	  img_selector:'img',//要加载的图片的选择器
+	  auto_imgHeight:true,//是否需要自动计算图片的高度
+	  fadein:true,//是否渐显载入
+	  fadein_speed:600,//渐显速率，单位毫秒
+	  insert_type:2, //单元格插入方式，1为插入最短那列，2为按序轮流插入
+	  getResource:function(index){ }  //获取动态资源函数,必须返回一个砖块元素集合,传入参数为加载的次数
+   },
+   //
+   waterfall=$.waterfall={},//对外信息对象
+   $container=null;//容器
+   waterfall.load_index=0, //加载次数
+   $.fn.extend({
+       waterfall:function(opt){
+		  opt=opt||{};  
+	      setting=$.extend(setting,opt);
+		  $container=waterfall.$container=$(this);
+		  waterfall.$columns=creatColumn();
+		  render($(this).find(setting.cell_selector).detach(),false); //重排已存在元素时强制不渐显
+		  waterfall._scrollTimer2=null;
+		  $(window).bind('scroll',function(){
+		     clearTimeout(waterfall._scrollTimer2);
+			 waterfall._scrollTimer2=setTimeout(onScroll,300);
+		  });
+		  waterfall._scrollTimer3=null;
+		  $(window).bind('resize',function(){
+		     clearTimeout(waterfall._scrollTimer3);
+			 waterfall._scrollTimer3=setTimeout(onResize,300);
+		  });
+	   }
+   });
+   function creatColumn(){//创建列
+      waterfall.column_num=calculateColumns();//列数
+	  //循环创建列
+	  var html='';
+	  for(var i=0;i<waterfall.column_num;i++){
+	     html+='<div class="'+setting.column_className+'" style="width:'+setting.column_width+'px; display:inline-block; *display:inline;zoom:1; margin-left:'+setting.column_space/2+'px;margin-right:'+setting.column_space/2+'px; vertical-align:top; overflow:hidden"></div>';
+	  }
+	  $container.prepend(html);//插入列
+	  return $('.'+setting.column_className,$container);//列集合
+   }
+   function calculateColumns(){//计算需要的列数
+      var num=Math.floor(($container.innerWidth())/(setting.column_width+setting.column_space));
+	  if(num<1){ num=1; } //保证至少有一列
+	  return num;
+   }
+   function render(elements,fadein){//渲染元素
+      if(!$(elements).length) return;//没有元素
+      var $columns = waterfall.$columns;
+      $(elements).each(function(i){										
+		  if(!setting.auto_imgHeight||setting.insert_type==2){//如果给出了图片高度，或者是按顺序插入，则不必等图片加载完就能计算列的高度了
+		     if(setting.insert_type==1){ 
+			    insert($(elements).eq(i),setting.fadein&&fadein);//插入元素
+			 }else if(setting.insert_type==2){
+			    insert2($(elements).eq(i),i,setting.fadein&&fadein);//插入元素	 
+		     }
+			 return true;//continue
+		  }						
+		  if($(this)[0].nodeName.toLowerCase()=='img'||$(this).find(setting.img_selector).length>0){//本身是图片或含有图片
+		      var image=new Image;
+			  var src=$(this)[0].nodeName.toLowerCase()=='img'?$(this).attr('src'):$(this).find(setting.img_selector).attr('src');
+			  image.onload=function(){//图片加载后才能自动计算出尺寸
+			      image.onreadystatechange=null;
+				  if(setting.insert_type==1){ 
+				     insert($(elements).eq(i),setting.fadein&&fadein);//插入元素
+				  }else if(setting.insert_type==2){
+					 insert2($(elements).eq(i),i,setting.fadein&&fadein);//插入元素	 
+				  }
+				  image=null;
+			  }
+			  image.onreadystatechange=function(){//处理IE等浏览器的缓存问题：图片缓存后不会再触发onload事件
+			      if(image.readyState == "complete"){
+					 image.onload=null;
+					 if(setting.insert_type==1){ 
+					    insert($(elements).eq(i),setting.fadein&&fadein);//插入元素
+					 }else if(setting.insert_type==2){
+					    insert2($(elements).eq(i),i,setting.fadein&&fadein);//插入元素	 
+					 }
+					 image=null;
+				  }
+			  }
+			  image.src=src;
+		  }else{//不用考虑图片加载
+		      if(setting.insert_type==1){ 
+				 insert($(elements).eq(i),setting.fadein&&fadein);//插入元素
+			  }else if(setting.insert_type==2){
+				 insert2($(elements).eq(i),i,setting.fadein&&fadein);//插入元素	 
+			  }
+		  }						
+	  });
+   }
+   function public_render(elems){//ajax得到元素的渲染接口
+   	  render(elems,true);	
+   }
+   function insert($element,fadein){//把元素插入最短列
+      if(fadein){//渐显
+	     $element.css('opacity',0).appendTo(waterfall.$columns.eq(calculateLowest())).fadeTo(setting.fadein_speed,1);
+	  }else{//不渐显
+         $element.appendTo(waterfall.$columns.eq(calculateLowest()));
+	  }
+   }
+   function insert2($element,i,fadein){//按序轮流插入元素
+      if(fadein){//渐显
+	     $element.css('opacity',0).appendTo(waterfall.$columns.eq(i%waterfall.column_num)).fadeTo(setting.fadein_speed,1);
+	  }else{//不渐显
+         $element.appendTo(waterfall.$columns.eq(i%waterfall.column_num));
+	  }
+   }
+   function calculateLowest(){//计算最短的那列的索引
+      var min=waterfall.$columns.eq(0).outerHeight(),min_key=0;
+	  waterfall.$columns.each(function(i){						   
+		 if($(this).outerHeight()<min){
+		    min=$(this).outerHeight();
+			min_key=i;
+		 }							   
+	  });
+	  return min_key;
+   }
+   function getElements(){//获取资源
+      $.waterfall.load_index++;
+      return setting.getResource($.waterfall.load_index,public_render);
+   }
+   waterfall._scrollTimer=null;//延迟滚动加载计时器
+   function onScroll(){//滚动加载
+      clearTimeout(waterfall._scrollTimer);
+	  waterfall._scrollTimer=setTimeout(function(){
+	      var $lowest_column=waterfall.$columns.eq(calculateLowest());//最短列
+		  var bottom=$lowest_column.offset().top+$lowest_column.outerHeight();//最短列底部距离浏览器窗口顶部的距离
+		  var scrollTop=document.documentElement.scrollTop||document.body.scrollTop||0;//滚动条距离
+		  var windowHeight=document.documentElement.clientHeight||document.body.clientHeight||0;//窗口高度
+		  if(scrollTop>=bottom-windowHeight){
+			 render(getElements(),true);
+		  }
+	  },100);
+   }
+   function onResize(){//窗口缩放时重新排列
+      if(calculateColumns()==waterfall.column_num) return; //列数未改变，不需要重排
+      var $cells=waterfall.$container.find(setting.cell_selector);
+	  waterfall.$columns.remove();
+	  waterfall.$columns=creatColumn();
+      render($cells,false); //重排已有元素时强制不渐显
+   }
+})(jQuery);
+</script>
+<script>
+var opt={
+  getResource:function(index,render){//index为已加载次数,render为渲染接口函数,接受一个dom集合或jquery对象作为参数。通过ajax等异步方法得到的数据可以传入该接口进行渲染，如 render(elem)
+	  if(index>=7) index=index%7+1;
+	  var html='';
+	  for(var i=20*(index-1);i<20*(index-1)+20;i++){
+		 var k='';
+		 for(var ii=0;ii<3-i.toString().length;ii++){
+	        k+='0';
+		 }
+		 k+=i;
+	  }
+	  return $(html);
+  },
+  auto_imgHeight:true,
+  insert_type:1
+}
+$('#container').waterfall(opt);
+</script>
+<div class="divBox_Text1">
+	<a href="javascript:void(0)" class="divBoxTxtclose">关闭</a>
+	<div>请登录后再进行操作</div>
+	<div>收藏成功</div>
+	<div>确定拉货　<a href="javascript:void(0)">确定</a>　<a href="javascript:void(0)">取消</a></div>
+</div>
+<div id="load" class="none">
+<div class="bg"></div>
+<div class="img"><img src="images/loading.gif"></div>
+</div>
+<div class="browserBox none">
+	<font class="text">您的浏览器版本过低导致网页无法正常加载，您可以</font><a href="http://www.microsoft.com/zh-cn/download/internet-explorer-8-details.aspx" target="_blank" class="iE">升级IE浏览器</a><font>或下载</font>
+	<a href="http://www.firefox.com.cn" target="_blank">firefox浏览器</a><a href="javascript:void(0)" class="publictitleBt icon publiccloseIe"></a>
+</div>
+</body>
+</html>

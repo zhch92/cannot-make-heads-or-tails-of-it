@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "微软雅黑";
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  clear: both;
+  height: 0;
+  content: "";
+  display: block;
+}
+.header {
+  background: #e6e6e6;
+  min-width: 1810px;
+  width:100%;
+  
+}
+.header .head {
+  width: 1770px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.header .head .logo {
+  float: left;
+  margin-left: 655px;
+  width: 470px;
+}
+.header .head .code {
+  float: right;
+  width: 310px;
+  text-align: right;
+  font-size: 16px;
+  color: #222222;
+  padding-right: 85px;
+  height: 60px;
+  line-height: 60px;
+  background: url(../images/code.png) no-repeat right;
+}
+.content .main {
+  width: 1770px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.content .main .floor {
+  border-bottom: 1px dashed #dedede;
+  padding: 23px 0px 18px;
+  width: 1920px;
+  position: relative;
+  left: -60px;
+}
+.content .main .floor .item {
+  border-left: 1px solid #dedede;
+  width: 498px;
+  padding: 25px 75px 35px 60px;
+  float: left;
+}
+.content .main .floor .item .lside {
+  width: 265px;
+  float: left;
+}
+.content .main .floor .item .lside td {
+  color: #727272;
+  font-size: 12px;
+}
+.content .main .floor .item .lside td span {
+  font-size: 16px;
+  color: #1b1b1b;
+}
+.content .main .floor .item .lside .tr_1 {
+  color: #727272;
+}
+.content .main .floor .item .lside .tr_2 {
+  line-height: 20px;
+}
+.content .main .floor .item .lside .tr_2 td {
+  color: #222222;
+}
+.content .main .floor .item .lside .tr_3 {
+  line-height: 20px;
+}
+.content .main .floor .item .lside .tr_3 td {
+  color: #000000;
+}
+.content .main .floor .item .lside .text {
+  margin-top: 15px;
+}
+.content .main .floor .item .lside .text p {
+  line-height: 20px;
+  font-size: 12px;
+  color: #727272;
+}
+.content .main .floor .item .introduce {
+  width: 205px;
+  float: right;
+  padding-top: 15px;
+}
+.content .main .floor .item .introduce p {
+  text-align: right;
+}
+.content .main .floor .item .introduce .price {
+  color: #feae4f;
+}
+.content .main .floor .item .introduce .price span {
+  font-size: 30px;
+  color: #feae4f;
+}
+.content .main .floor .item .introduce .kind {
+  font-size: 16px;
+  color: #989898;
+  margin-top: 8px;
+}
+.content .main .floor .item .introduce .number {
+  color: #727272;
+  font-size: 14px;
+  margin-top: 20px;
+}
+#demo1 {
+  position: relative;
+  top: 0;
+}
+#demo {
+  overflow: hidden;
+  width: 1770px;
+  height: 908px;
+  margin: 0 auto;
+  padding-left:20px;
+  padding-right:20px;
+}

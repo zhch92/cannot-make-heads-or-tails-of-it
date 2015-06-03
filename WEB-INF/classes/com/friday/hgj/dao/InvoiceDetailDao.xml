@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN' 'http://mybatis.org/dtd/mybatis-3-mapper.dtd' >
+<mapper namespace="com.friday.hgj.dao.InvoiceDetailDao" >
+
+	<insert id="insert" parameterType="com.friday.hgj.model.InvoiceDetail" useGeneratedKeys="true" keyProperty="id" >
+		insert into invoice_detail (userId,ordersId,Address,telephone,accepter,taxLevel,amount,taxation, bank,bankCarNo,taxType,status,receiveType,operateTime,operateId)
+	    values(#{userId},#{ordersId},#{address},#{telephone},#{accepter},#{taxLevel},#{amount},#{taxation},#{bank},#{bankCarNo},#{taxType},#{status},#{receiveType},now(),#{operateId})
+	</insert>
+	
+	<update id="update" parameterType="com.friday.hgj.model.InvoiceDetail" >
+	    update invoice_detail
+	    <set >
+	      <if test="userId != 0" >
+	        userId = #{userId},
+	      </if>
+	      <if test="ordersId != 0" >
+	        ordersId = #{ordersId},
+	      </if>
+	      <if test="address != null" >
+	        Address = #{address},
+	      </if>
+	      <if test="telephone != null" >
+	        telephone = #{telephone},
+	      </if>
+	      <if test="accepter != null" >
+	        accepter = #{accepter},
+	      </if>
+	      <if test="taxLevel != null" >
+	        taxLevel = #{taxLevel},
+	      </if>
+	      <if test="amount != null" >
+	        amount = #{amount},
+	      </if>
+	      <if test="taxation != null" >
+	        taxation = #{taxation},
+	      </if>
+	      <if test="bank != null" >
+	        bank = #{bank},
+	      </if>
+	      <if test="bankCarNo != null" >
+	        bankCarNo = #{bankCarNo},
+	      </if>
+	      <if test="taxType != 0" >
+	        taxType = #{taxType},
+	      </if>
+	      <if test="status != 0" >
+	        status = #{status},
+	      </if>
+	      <if test="operateTime != null" >
+	        operateTime = #{operateTime},
+	      </if>
+	      <if test="operateId != 0" >
+	        operateId = #{operateId},
+	      </if>
+	    </set>
+	    where id = #{id}
+	  </update>
+</mapper>
